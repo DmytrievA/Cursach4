@@ -8,122 +8,31 @@
 
 package com.DTP.dailyTimePlaner.XML.org.itroi.task;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+
 import com.DTP.dailyTimePlaner.XML.org.itroi.entity.Entity;
 
+import javax.persistence.Column;
+import java.util.Optional;
 
-/**
- * <p>Java class for statusType complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * 
- * <pre>
- * &lt;complexType name="statusType">
- *   &lt;complexContent>
- *     &lt;extension base="{http://www.itroi.org/entity}Entity">
- *       &lt;choice>
- *         &lt;element name="finished" type="{http://www.w3.org/2001/XMLSchema}time"/>
- *         &lt;element name="expired" type="{http://www.w3.org/2001/XMLSchema}time"/>
- *         &lt;element name="countdown" type="{http://www.w3.org/2001/XMLSchema}time"/>
- *       &lt;/choice>
- *     &lt;/extension>
- *   &lt;/complexContent>
- * &lt;/complexType>
- * </pre>
- * 
- * 
- */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "statusType", propOrder = {
-    "finished",
-    "expired",
-    "countdown"
-})
+@javax.persistence.Entity(name = "state_task")
 public class StatusType
     extends Entity
 {
+    @Column(name = "name",
+            columnDefinition = "VARCHAR(45)",
+            nullable = false)
+    protected String name;
 
-    @XmlSchemaType(name = "time")
-    protected XMLGregorianCalendar finished;
-    @XmlSchemaType(name = "time")
-    protected XMLGregorianCalendar expired;
-    @XmlSchemaType(name = "time")
-    protected XMLGregorianCalendar countdown;
-
-    /**
-     * Gets the value of the finished property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getFinished() {
-        return finished;
+    public StatusType() {
+        super();
     }
 
-    /**
-     * Sets the value of the finished property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setFinished(XMLGregorianCalendar value) {
-        this.finished = value;
+    public String getName() {
+        return name;
     }
 
-    /**
-     * Gets the value of the expired property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getExpired() {
-        return expired;
-    }
-
-    /**
-     * Sets the value of the expired property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setExpired(XMLGregorianCalendar value) {
-        this.expired = value;
-    }
-
-    /**
-     * Gets the value of the countdown property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getCountdown() {
-        return countdown;
-    }
-
-    /**
-     * Sets the value of the countdown property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setCountdown(XMLGregorianCalendar value) {
-        this.countdown = value;
+    public void setName(String name) {
+        this.name = name;
     }
 
 }

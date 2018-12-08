@@ -2,19 +2,26 @@
 <body>
 <div>
     <form method="post">
-        <input type="date" name="date"/>
-        <input type="time" name="timeStart"/>
-        <input type="time" name="timeFinish"/>
-        <input type="text" name="name" placeholder="Введите имя"/>
-        <input type="text" name="description" placeholder="Введите описание"/>
+        <input type="date" name="date"/><br>
+        <input type="time" name="timeStart"/><br>
+        <input type="time" name="timeFinish"/><br>
+        <input type="text" name="name" placeholder="Введите название"/><br>
+        <input type="text" name="description" placeholder="Введите описание"/><br>
+        <select name="taskState">
+            <option value="1">Ожидает</option>
+            <option value="2">В процессе</option>
+            <option value="3">Завершён</option>
+            <option value="4">Провален</option>
+            <option value="5">Отклонен</option>
+        </select>
         <button type="submit">Добавить</button>
     </form>
 </div>
 <div>
-    <h3>{{#message}}
-            {{message}}<br/>
+    <h3>{{#taskState}}
+            {{taskState}}<br/>
             {{time}}<br/>
-        {{/message}}
+        {{/taskState}}
     </h3>
 </div>
 <div>
@@ -27,6 +34,9 @@
         <br>{{date}}
         <br>{{time}}
         <br>{{duration}}
+        <br>{{#taskStatus}}
+                {{name}}
+            {{/taskStatus}}
     </div>
     {{/tasks}}
 </body>

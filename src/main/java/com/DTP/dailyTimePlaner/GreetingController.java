@@ -1,31 +1,27 @@
 package com.DTP.dailyTimePlaner;
 
 import com.DTP.dailyTimePlaner.XML.org.itroi.task.TaskType;
-import com.DTP.dailyTimePlaner.repos.TaskRepo;
+import com.DTP.dailyTimePlaner.repos.StatusTypeRepo;
 import com.DTP.dailyTimePlaner.repos.TaskTypeRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import com.DTP.dailyTimePlaner.domain.Task;
 
 import javax.xml.datatype.DatatypeConfigurationException;
-import javax.xml.datatype.DatatypeFactory;
-import javax.xml.datatype.XMLGregorianCalendar;
 import java.sql.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.Period;
-import java.util.GregorianCalendar;
 import java.util.Map;
-import java.util.concurrent.TimeUnit;
 
 @Controller
 public class GreetingController {
 
     @Autowired
-    private TaskTypeRepo taskRepo;
+    private TaskTypeRepo taskTypeRepo;
+    @Autowired
+    private StatusTypeRepo statusTypeRepo;
     @GetMapping("/greeting")
     public String greeting(
             @RequestParam(name="name", required=false, defaultValue="World") String name, Map<String, Object> model)
@@ -36,7 +32,7 @@ public class GreetingController {
 
     @GetMapping
     public String main(Map<String,Object> model) {
-        Iterable<TaskType> tasks = taskRepo.findAll();
+        Iterable<TaskType> tasks = taskTypeRepo.findAll();
 
         model.put("tasks", tasks);
 
@@ -49,7 +45,7 @@ public class GreetingController {
                       @RequestParam String date,
                       @RequestParam String timeFinish,
                       @RequestParam String timeStart,
-                      @RequestParam Integer taskState,
+                      @RequestParam String taskState,
                       Map<String,Object> model) throws DatatypeConfigurationException {
 
         date = date.replace('T',' ');
@@ -70,12 +66,11 @@ public class GreetingController {
             model.put("time",timeStart);
             return "greeting";
         }
-
         task.setTitle(name);
         task.setDescription(description);
-
-        taskRepo.save(task);
-        Iterable<TaskType> tasks = taskRepo.findAll();
+        task.setTaskState(statusTypeRepo.findById(Integer.parseInt(taskState)).get());
+        taskTypeRepo.save(task);
+        Iterable<TaskType> tasks = taskTypeRepo.findAll();
         model.put("tasks", tasks);
         return "greeting";
     }

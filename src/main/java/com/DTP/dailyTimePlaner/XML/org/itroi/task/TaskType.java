@@ -58,10 +58,7 @@ import java.util.GregorianCalendar;
     "time",
     "duration",
     "description",
-    "status",
     "user",
-
-
     "reminders"
 })
 @javax.persistence.Entity(name = "taskXMLTest")
@@ -100,19 +97,17 @@ public class TaskType
     @XmlElement(required = true)
     protected String description;
 
-    @Column(name = "TASK_STATE",
-            nullable = false,
-            columnDefinition = "TINYINT")
-    protected int taskState;
+
+    @ManyToOne
+    @JoinColumn(name = "id_state_task",
+            referencedColumnName = "id",
+            nullable = false)
+    protected StatusType taskStatus;
 
     @Transient
     @XmlElement(name = "DayOfWeek")
     @XmlSchemaType(name = "string")
     protected DayOfWeekType dayOfWeek;
-
-    @Transient
-    @XmlElement(required = true)
-    protected StatusType status;
 
     @Transient
     @XmlElement(required = true)
@@ -122,16 +117,14 @@ public class TaskType
     @XmlElement(required = true)
     protected RemindersType reminders;
 
-    public int getTaskState() {
-        return taskState;
+    public StatusType getTaskState() {
+        return taskStatus;
     }
 
-    public void setTaskState(int taskState) {
-        if(taskState<=0 || taskState>5)
+    public void setTaskState(StatusType taskState) {
+        if(taskState.getId()<=0 || taskState.getId()>5)
             throw new InvalidParameterException("wrong FK");
-        this.status = new StatusType();
-        status.set
-        this.taskState = taskState;
+        this.taskStatus = taskState;
     }
 
     /**
@@ -278,29 +271,6 @@ public class TaskType
         this.description = value;
     }
 
-    /**
-     * Gets the value of the status property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StatusType }
-     *     
-     */
-    public StatusType getStatus() {
-        return status;
-    }
-
-    /**
-     * Sets the value of the status property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StatusType }
-     *     
-     */
-    public void setStatus(StatusType value) {
-        this.status = value;
-    }
 
     /**
      * Gets the value of the user property.

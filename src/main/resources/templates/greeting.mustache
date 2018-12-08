@@ -7,7 +7,7 @@
         <input type="time" name="timeFinish"/><br>
         <input type="text" name="name" placeholder="Введите название"/><br>
         <input type="text" name="description" placeholder="Введите описание"/><br>
-        <select name="taskState" datatype="number" itemtype="number">
+        <select name="taskState">
             <option value="1">Ожидает</option>
             <option value="2">В процессе</option>
             <option value="3">Завершён</option>
@@ -18,10 +18,10 @@
     </form>
 </div>
 <div>
-    <h3>{{#message}}
-            {{message}}<br/>
+    <h3>{{#taskState}}
+            {{taskState}}<br/>
             {{time}}<br/>
-        {{/message}}
+        {{/taskState}}
     </h3>
 </div>
 <div>
@@ -34,6 +34,9 @@
         <br>{{date}}
         <br>{{time}}
         <br>{{duration}}
+        <br>{{#taskStatus}}
+                {{name}}
+            {{/taskStatus}}
     </div>
     {{/tasks}}
 </body>

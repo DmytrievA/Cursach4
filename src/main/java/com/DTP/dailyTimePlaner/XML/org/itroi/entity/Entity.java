@@ -49,10 +49,10 @@ import javax.persistence.*;
     GroupType.class,
     ReminderType.class
 })
-@javax.persistence.Entity(name = "base_entity_test")
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@MappedSuperclass
 public class Entity {
     @Id
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     @XmlAttribute(name = "id", required = true)
     protected int id;

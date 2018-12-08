@@ -4,12 +4,9 @@ package com.DTP.dailyTimePlaner.domain;
 import javax.persistence.*;
 import java.util.Date;
 
-@Entity(name="tasks")
-public class Task {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="id_task")
-    private Integer idTask;
+@Entity(name="tasksTest")
+public class Task  extends BaseEntity{
+
     @Column(name="users_id_user")
     private Integer userID;
     @Column(name="description")
@@ -30,14 +27,6 @@ public class Task {
         this.dateTime = dateTime;
         this.name = name;
         this.taskState = taskState;
-    }
-
-    public Integer getIdTask() {
-        return idTask;
-    }
-
-    public void setIdTask(Integer idTask) {
-        this.idTask = idTask;
     }
 
     public Integer getUserID() {

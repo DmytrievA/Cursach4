@@ -2,66 +2,67 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="001c8671-e291-473b-b6f4-3f080fa59930" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/a5279819-5007-4be9-b7cb-19ea8a194048.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_mysql_connector_java_6_0_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.project" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/.idea/dataSources/a5279819-5007-4be9-b7cb-19ea8a194048.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/.idea/libraries/mysql_mysql_connector_java_6_0_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/.project" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/dailyTimePlaner.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/DTP/dailyTimePlaner/Application.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/DTP/dailyTimePlaner/GreetingController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/DTP/dailyTimePlaner/domain/Task.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/java/com/DTP/dailyTimePlaner/repos/TaskRepo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/resources/templates/greeting.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/target/classes/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/target/classes/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/target/classes/templates/greeting.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dailyTimePlaner.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/GreetingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/domain/Mesage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/domain/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/repos/MessageRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/repos/TaskRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/greeting.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/maven/com.DTP/dailyTimePlaner/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/maven/com.DTP/dailyTimePlaner/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/DTP/dailyTimePlaner/Application.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/DTP/dailyTimePlaner/GreetingController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/DTP/dailyTimePlaner/domain/Mesage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/DTP/dailyTimePlaner/domain/Task.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/DTP/dailyTimePlaner/repos/MessageRepo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/DTP/dailyTimePlaner/repos/TaskRepo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/greeting.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/Entity.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/Groups.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/Groups.xsd.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/HTML/day.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/HTML/reminder.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/HTML/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/HTML/user.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/Reminder.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/Reminder.xsd.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/Task.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/Task.xsd.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/Tasks.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/Tasks.xsd.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/User.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/User.xsd.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/XSL/day.xsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/XSL/reminders.xsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/XSL/task.xsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/XSL/user.xsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/entity/Entity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/entity/ObjectFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/entity/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/group/GroupType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/group/ObjectFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/group/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/reminder/ObjectFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/reminder/ReminderType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/reminder/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/task/DayOfWeekType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/task/ObjectFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/task/RemindersType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/task/StatusType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/task/TaskType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/task/UserType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/task/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/tasks/ObjectFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/tasks/TasksType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/tasks/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/user/GroupRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/user/GroupRoleName.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/user/MemberOfGroup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/user/MemberOfGroups.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/user/ObjectFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/user/RoleType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/user/UserType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/user/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/domain/BaseEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/repos/TaskTypeRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dailyTimePlaner.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/GreetingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/GreetingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/domain/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/domain/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/greeting.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/greeting.mustache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/com.DTP/dailyTimePlaner/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/com.DTP/dailyTimePlaner/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/greeting.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/greeting.mustache" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -88,19 +89,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/greeting.mustache">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/GreetingController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="56" column="50" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
+            <state relative-caret-position="119">
+              <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -109,28 +101,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/domain/Mesage.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/domain/BaseEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+            <state relative-caret-position="68">
+              <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/domain/Task.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1355#1356#0" expanded="true" />
-                <element signature="e#1386#1387#0" expanded="true" />
-                <element signature="e#1432#1433#0" expanded="true" />
-                <element signature="e#1472#1473#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -145,14 +121,121 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/task/TaskType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="132" column="18" selection-start-line="132" selection-start-column="18" selection-end-line="132" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3882#3883#0" expanded="true" />
+                <element signature="e#3914#3915#0" expanded="true" />
+                <element signature="docComment;method#getTitle#0;class#TaskType#0" />
+                <element signature="e#3761#3762#0" expanded="true" />
+                <element signature="e#3789#3790#0" expanded="true" />
+                <element signature="docComment;method#setTitle#0;class#TaskType#0" />
+                <element signature="e#3988#3989#0" expanded="true" />
+                <element signature="e#4022#4023#0" expanded="true" />
+                <element signature="docComment;method#getDate#0;class#TaskType#0" />
+                <element signature="e#3659#3660#0" expanded="true" />
+                <element signature="e#3686#3687#0" expanded="true" />
+                <element signature="docComment;method#setDate#0;class#TaskType#0" />
+                <element signature="e#4251#4252#0" expanded="true" />
+                <element signature="e#4284#4285#0" expanded="true" />
+                <element signature="docComment;method#getDayOfWeek#0;class#TaskType#0" />
+                <element signature="e#4151#4152#0" expanded="true" />
+                <element signature="e#4183#4184#0" expanded="true" />
+                <element signature="docComment;method#setDayOfWeek#0;class#TaskType#0" />
+                <element signature="e#4404#4405#0" expanded="true" />
+                <element signature="e#4442#4443#0" expanded="true" />
+                <element signature="docComment;method#getTime#0;class#TaskType#0" />
+                <element signature="e#4653#4654#0" expanded="true" />
+                <element signature="e#4680#4681#0" expanded="true" />
+                <element signature="docComment;method#setTime#0;class#TaskType#0" />
+                <element signature="e#4905#4906#0" expanded="true" />
+                <element signature="e#4938#4939#0" expanded="true" />
+                <element signature="docComment;method#getDuration#0;class#TaskType#0" />
+                <element signature="e#5157#5158#0" expanded="true" />
+                <element signature="e#5188#5189#0" expanded="true" />
+                <element signature="docComment;method#setDuration#0;class#TaskType#0" />
+                <element signature="e#5421#5422#0" expanded="true" />
+                <element signature="e#5458#5459#0" expanded="true" />
+                <element signature="docComment;method#getDescription#0;class#TaskType#0" />
+                <element signature="e#5655#5656#0" expanded="true" />
+                <element signature="e#5689#5690#0" expanded="true" />
+                <element signature="docComment;method#setDescription#0;class#TaskType#0" />
+                <element signature="e#5900#5901#0" expanded="true" />
+                <element signature="e#5940#5941#0" expanded="true" />
+                <element signature="docComment;method#getStatus#0;class#TaskType#0" />
+                <element signature="e#6135#6136#0" expanded="true" />
+                <element signature="e#6164#6165#0" expanded="true" />
+                <element signature="docComment;method#setStatus#0;class#TaskType#0" />
+                <element signature="e#6373#6374#0" expanded="true" />
+                <element signature="e#6408#6409#0" expanded="true" />
+                <element signature="docComment;method#getUser#0;class#TaskType#0" />
+                <element signature="e#6595#6596#0" expanded="true" />
+                <element signature="e#6622#6623#0" expanded="true" />
+                <element signature="docComment;method#setUser#0;class#TaskType#0" />
+                <element signature="e#6823#6824#0" expanded="true" />
+                <element signature="e#6856#6857#0" expanded="true" />
+                <element signature="docComment;method#getReminders#0;class#TaskType#0" />
+                <element signature="e#7063#7064#0" expanded="true" />
+                <element signature="e#7095#7096#0" expanded="true" />
+                <element signature="docComment;method#setReminders#0;class#TaskType#0" />
+                <element signature="e#7316#7317#0" expanded="true" />
+                <element signature="e#7354#7355#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/Task.xsd">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="19" column="23" lean-forward="true" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/task/StatusType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="697">
+              <caret line="86" column="8" selection-start-line="86" selection-start-column="8" selection-end-line="86" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/greeting.mustache">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="67" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/GreetingController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="291">
+              <caret line="51" column="54" selection-start-line="51" selection-start-column="54" selection-end-line="51" selection-end-column="54" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -178,13 +261,21 @@
         <option value="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/Application.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/repos/TaskRepo.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/repos/MessageRepo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/domain/Mesage.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/domain/Task.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/domain/BaseEntity.java" />
+        <option value="$PROJECT_DIR$/src/XML/org/itroi/task/TaskType.java" />
+        <option value="$PROJECT_DIR$/src/XML/org/itroi/entity/Entity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/reminder/ReminderType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/tasks/TasksType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/repos/TaskTypeRepo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/entity/Entity.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/GreetingController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/greeting.mustache" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/domain/Task.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/task/TaskType.java" />
       </list>
     </option>
   </component>
@@ -207,10 +298,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="209" />
-    <option name="y" value="-17" />
-    <option name="width" value="654" />
-    <option name="height" value="788" />
+    <option name="x" value="-7" />
+    <option name="width" value="697" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -218,42 +308,44 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="dailyTimePlaner" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dailyTimePlaner" type="462c0819:PsiDirectoryNode" />
+              <item name="Cursach4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cursach4" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="dailyTimePlaner" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dailyTimePlaner" type="462c0819:PsiDirectoryNode" />
+              <item name="Cursach4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cursach4" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="dailyTimePlaner" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dailyTimePlaner" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dailyTimePlaner" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dailyTimePlaner" type="462c0819:PsiDirectoryNode" />
+              <item name="Cursach4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cursach4" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="dailyTimePlaner" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dailyTimePlaner" type="462c0819:PsiDirectoryNode" />
+              <item name="Cursach4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cursach4" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Cursach4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cursach4" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="dailyTimePlaner" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="dailyTimePlaner" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dailyTimePlaner" type="462c0819:PsiDirectoryNode" />
+              <item name="Cursach4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cursach4" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -261,41 +353,54 @@
               <item name="domain" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="dailyTimePlaner" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dailyTimePlaner" type="462c0819:PsiDirectoryNode" />
+              <item name="Cursach4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cursach4" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="dailyTimePlaner" type="462c0819:PsiDirectoryNode" />
-              <item name="repos" type="462c0819:PsiDirectoryNode" />
+              <item name="XML" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="dailyTimePlaner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cursach4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cursach4" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="dailyTimePlaner" type="462c0819:PsiDirectoryNode" />
+              <item name="XML" type="462c0819:PsiDirectoryNode" />
+              <item name="itroi" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Cursach4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cursach4" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dailyTimePlaner" type="462c0819:PsiDirectoryNode" />
+              <item name="XML" type="462c0819:PsiDirectoryNode" />
+              <item name="itroi" type="462c0819:PsiDirectoryNode" />
+              <item name="task" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Cursach4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cursach4" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="dailyTimePlaner" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dailyTimePlaner" type="462c0819:PsiDirectoryNode" />
+              <item name="Cursach4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cursach4" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="dailyTimePlaner" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dailyTimePlaner" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -311,8 +416,8 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543911843298" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/javax.persistence.jar.zip!/" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544229833889" />
+    <property name="last_opened_file_path" value="E:/srudio_workspace/-_-/ITROI v2.0" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -322,6 +427,12 @@
     <property name="settings.editor.splitter.proportion" value="0.38102895" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\eclipse_workspace\Cursach4\src\main\java\com\DTP\dailyTimePlaner" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\eclipse_workspace\Cursach4\src" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.DTP.dailyTimePlaner.domain" />
       <recent name="com.DTP.dailyTimePlaner.model" />
@@ -339,7 +450,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.Application">
+    <configuration name="All in dailyTimePlaner (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dailyTimePlaner" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in dailyTimePlaner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dailyTimePlaner" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="dailyTimePlaner" />
       <extension name="coverage">
@@ -359,6 +486,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.Application" />
+        <item itemvalue="JUnit.All in dailyTimePlaner (1)" />
+        <item itemvalue="JUnit.All in dailyTimePlaner" />
       </list>
     </recent_temporary>
   </component>
@@ -376,16 +505,64 @@
       <workItem from="1543840939692" duration="3389000" />
       <workItem from="1543845661069" duration="2913000" />
       <workItem from="1543906200622" duration="4921000" />
+      <workItem from="1544000149292" duration="1173000" />
+      <workItem from="1544001619724" duration="500000" />
+      <workItem from="1544002335232" duration="134000" />
+      <workItem from="1544014326778" duration="335000" />
+      <workItem from="1544014871954" duration="2061000" />
+      <workItem from="1544207946949" duration="18512000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="All_in_dailyTimePlaner - 2018.12.05 at 11h 26m 35s.xml">
+      <configuration name="All in dailyTimePlaner" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_dailyTimePlaner - 2018.12.05 at 11h 26m 54s.xml">
+      <configuration name="All in dailyTimePlaner" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_dailyTimePlaner - 2018.12.05 at 11h 27m 27s.xml">
+      <configuration name="All in dailyTimePlaner" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_dailyTimePlaner - 2018.12.05 at 11h 27m 49s.xml">
+      <configuration name="All in dailyTimePlaner" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_dailyTimePlaner_(1) - 2018.12.05 at 11h 28m 33s.xml">
+      <configuration name="All in dailyTimePlaner (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_dailyTimePlaner_(1) - 2018.12.05 at 11h 32m 46s.xml">
+      <configuration name="All in dailyTimePlaner (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_dailyTimePlaner_(1) - 2018.12.05 at 11h 34m 12s.xml">
+      <configuration name="All in dailyTimePlaner (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_dailyTimePlaner_(1) - 2018.12.05 at 11h 34m 20s.xml">
+      <configuration name="All in dailyTimePlaner (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_dailyTimePlaner_(1) - 2018.12.05 at 15h 02m 09s.xml">
+      <configuration name="All in dailyTimePlaner (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_dailyTimePlaner_(1) - 2018.12.05 at 15h 05m 22s.xml">
+      <configuration name="All in dailyTimePlaner (1)" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21380000" />
+    <option name="totallyTimeSpent" value="44095000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24205749" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2647504" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -396,13 +573,13 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" weight="0.44680852" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.30932897" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.49590835" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3289689" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.3289689" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3289689" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5015129" side_tool="true" weight="0.44680852" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3289689" />
@@ -438,19 +615,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/resource/usersResource.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dailyTimePlaner.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dailyTimePlaner.iml" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.0.5.RELEASE/spring-boot-autoconfigure-2.0.5.RELEASE.jar!/org/springframework/boot/autoconfigure/jdbc/DataSourceProperties.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
@@ -472,23 +637,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="47" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/repos/TaskRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="61" selection-start-line="5" selection-start-column="61" selection-end-line="5" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/repos/MessageRepo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -506,27 +654,108 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.0.5.RELEASE/spring-boot-2.0.5.RELEASE.jar!/org/springframework/boot/SpringApplication.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="198" column="142" selection-start-line="198" selection-start-column="142" selection-end-line="198" selection-end-column="142" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
+        <state relative-caret-position="578">
           <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/GreetingController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/domain/Task.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="56" column="50" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/greeting.mustache">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/reminder/ReminderType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+        <state relative-caret-position="43">
+          <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/tasks/TasksType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/task/RemindersType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/repos/TaskRepo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/repos/TaskTypeRepo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="69" selection-start-line="5" selection-start-column="69" selection-end-line="5" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/entity/Entity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="51" column="50" selection-start-line="51" selection-start-column="50" selection-end-line="51" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#1865#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/domain/BaseEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -537,17 +766,100 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/domain/Task.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/GreetingController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        <state relative-caret-position="291">
+          <caret line="51" column="54" selection-start-line="51" selection-start-column="54" selection-end-line="51" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1355#1356#0" expanded="true" />
-            <element signature="e#1386#1387#0" expanded="true" />
-            <element signature="e#1432#1433#0" expanded="true" />
-            <element signature="e#1472#1473#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/greeting.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="67" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/task/TaskType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="132" column="18" selection-start-line="132" selection-start-column="18" selection-end-line="132" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3882#3883#0" expanded="true" />
+            <element signature="e#3914#3915#0" expanded="true" />
+            <element signature="docComment;method#getTitle#0;class#TaskType#0" />
+            <element signature="e#3761#3762#0" expanded="true" />
+            <element signature="e#3789#3790#0" expanded="true" />
+            <element signature="docComment;method#setTitle#0;class#TaskType#0" />
+            <element signature="e#3988#3989#0" expanded="true" />
+            <element signature="e#4022#4023#0" expanded="true" />
+            <element signature="docComment;method#getDate#0;class#TaskType#0" />
+            <element signature="e#3659#3660#0" expanded="true" />
+            <element signature="e#3686#3687#0" expanded="true" />
+            <element signature="docComment;method#setDate#0;class#TaskType#0" />
+            <element signature="e#4251#4252#0" expanded="true" />
+            <element signature="e#4284#4285#0" expanded="true" />
+            <element signature="docComment;method#getDayOfWeek#0;class#TaskType#0" />
+            <element signature="e#4151#4152#0" expanded="true" />
+            <element signature="e#4183#4184#0" expanded="true" />
+            <element signature="docComment;method#setDayOfWeek#0;class#TaskType#0" />
+            <element signature="e#4404#4405#0" expanded="true" />
+            <element signature="e#4442#4443#0" expanded="true" />
+            <element signature="docComment;method#getTime#0;class#TaskType#0" />
+            <element signature="e#4653#4654#0" expanded="true" />
+            <element signature="e#4680#4681#0" expanded="true" />
+            <element signature="docComment;method#setTime#0;class#TaskType#0" />
+            <element signature="e#4905#4906#0" expanded="true" />
+            <element signature="e#4938#4939#0" expanded="true" />
+            <element signature="docComment;method#getDuration#0;class#TaskType#0" />
+            <element signature="e#5157#5158#0" expanded="true" />
+            <element signature="e#5188#5189#0" expanded="true" />
+            <element signature="docComment;method#setDuration#0;class#TaskType#0" />
+            <element signature="e#5421#5422#0" expanded="true" />
+            <element signature="e#5458#5459#0" expanded="true" />
+            <element signature="docComment;method#getDescription#0;class#TaskType#0" />
+            <element signature="e#5655#5656#0" expanded="true" />
+            <element signature="e#5689#5690#0" expanded="true" />
+            <element signature="docComment;method#setDescription#0;class#TaskType#0" />
+            <element signature="e#5900#5901#0" expanded="true" />
+            <element signature="e#5940#5941#0" expanded="true" />
+            <element signature="docComment;method#getStatus#0;class#TaskType#0" />
+            <element signature="e#6135#6136#0" expanded="true" />
+            <element signature="e#6164#6165#0" expanded="true" />
+            <element signature="docComment;method#setStatus#0;class#TaskType#0" />
+            <element signature="e#6373#6374#0" expanded="true" />
+            <element signature="e#6408#6409#0" expanded="true" />
+            <element signature="docComment;method#getUser#0;class#TaskType#0" />
+            <element signature="e#6595#6596#0" expanded="true" />
+            <element signature="e#6622#6623#0" expanded="true" />
+            <element signature="docComment;method#setUser#0;class#TaskType#0" />
+            <element signature="e#6823#6824#0" expanded="true" />
+            <element signature="e#6856#6857#0" expanded="true" />
+            <element signature="docComment;method#getReminders#0;class#TaskType#0" />
+            <element signature="e#7063#7064#0" expanded="true" />
+            <element signature="e#7095#7096#0" expanded="true" />
+            <element signature="docComment;method#setReminders#0;class#TaskType#0" />
+            <element signature="e#7316#7317#0" expanded="true" />
+            <element signature="e#7354#7355#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/Task.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="19" column="23" lean-forward="true" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/task/StatusType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="86" column="8" selection-start-line="86" selection-start-column="8" selection-end-line="86" selection-end-column="8" />
         </state>
       </provider>
     </entry>

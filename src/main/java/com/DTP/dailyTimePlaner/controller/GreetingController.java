@@ -34,7 +34,8 @@ public class GreetingController {
     @GetMapping("/greeting")
     public String greeting(Map<String, Object> model)
     {
-        List<TaskType> tasks = taskTypeRepo.findByUserId(1);
+        List<TaskType> tasks = taskTypeRepo
+                .findByUserEmail(SecurityContextHolder.getContext().getAuthentication().getName());
         model.put("tasks", tasks);
         return "greeting";
     }
@@ -47,7 +48,6 @@ public class GreetingController {
 
     @PostMapping("/greeting")
     public String add(
-            @AuthenticationPrincipal UserType user,
             @RequestParam String name,
             @RequestParam String description,
             @RequestParam String date,
@@ -56,10 +56,10 @@ public class GreetingController {
             @RequestParam String taskState,
             Map<String,Object> model) throws DatatypeConfigurationException {
         date = date.replace('T',' ');
-        String currentUserName;
+        UserType user;
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (!(authentication instanceof AnonymousAuthenticationToken)) {
-            currentUserName = authentication.getName();
+            String currentUserName = authentication.getName();
             user = userRepo.findByEmail(currentUserName);
         }
         else
@@ -89,7 +89,7 @@ public class GreetingController {
         task.setUser(user);
 
         taskTypeRepo.save(task);
-        Iterable<TaskType> tasks = taskTypeRepo.findByUserId(user.getId());
+        Iterable<TaskType> tasks = taskTypeRepo.findByUserEmail(user.getEmail());
         model.put("tasks", tasks);
         return "greeting";
     }

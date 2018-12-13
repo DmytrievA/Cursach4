@@ -48,9 +48,10 @@ import java.util.Set;
 
 @javax.persistence.Entity(name = "user_test")
 public class UserType
-    extends com.DTP.dailyTimePlaner.XML.org.itroi.entity.Entity
+    //extends com.DTP.dailyTimePlaner.XML.org.itroi.entity.Entity
     implements UserDetails {
 
+    @Id
     @Column(name = "email", columnDefinition = "varchar(100)", nullable = false,unique = true)
     @XmlElement(required = true)
     protected String email;

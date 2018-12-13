@@ -1,6 +1,5 @@
 package com.DTP.dailyTimePlaner.controller;
 
-import com.DTP.dailyTimePlaner.XML.org.itroi.user.RoleType;
 import com.DTP.dailyTimePlaner.XML.org.itroi.user.UserType;
 import com.DTP.dailyTimePlaner.repos.RoleTypeRepo;
 import com.DTP.dailyTimePlaner.repos.UserRepo;
@@ -10,7 +9,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import java.util.Collections;
 import java.util.Map;
 
 @Controller

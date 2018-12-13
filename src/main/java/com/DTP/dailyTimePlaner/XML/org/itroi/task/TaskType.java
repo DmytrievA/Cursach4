@@ -102,8 +102,8 @@ public class TaskType
 
 
     @ManyToOne
-    @JoinColumn(name="userId",
-            referencedColumnName = "id",
+    @JoinColumn(name="userEmail",
+            referencedColumnName = "email",
             nullable = false)
     @XmlElement(required = true)
     protected com.DTP.dailyTimePlaner.XML.org.itroi.user.UserType user;

@@ -7,6 +7,6 @@ import java.util.List;
 
 public interface TaskTypeRepo extends JpaRepository<TaskType, Integer> {
 
-    List<TaskType> findByUserId(Integer id);
+    List<TaskType> findByUserEmail(String id);
 
 }

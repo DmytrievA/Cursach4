@@ -8,51 +8,32 @@
 
 package com.DTP.dailyTimePlaner.XML.org.itroi.user;
 
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
+import com.DTP.dailyTimePlaner.XML.org.itroi.entity.Entity;
+import org.springframework.security.core.GrantedAuthority;
+
+import javax.persistence.Column;
 import javax.xml.bind.annotation.XmlType;
 
-
-/**
- * <p>Java class for roleType.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
- * <pre>
- * &lt;simpleType name="roleType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="admin"/>
- *     &lt;enumeration value="user"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
- * </pre>
- * 
- */
 @XmlType(name = "roleType")
-@XmlEnum
-public enum RoleType {
+@javax.persistence.Entity(name = "role")
+public class RoleType
+        extends Entity
+        implements GrantedAuthority {
 
-    @XmlEnumValue("admin")
-    ADMIN("admin"),
-    @XmlEnumValue("user")
-    USER("user");
-    private final String value;
+    @Column(name = "name",
+            columnDefinition = "VARCHAR(15)",
+            nullable = false,unique = true)
+    protected String name;
 
-    RoleType(String v) {
-        value = v;
+    public String getName() {
+        return name;
     }
 
-    public String value() {
-        return value;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public static RoleType fromValue(String v) {
-        for (RoleType c: RoleType.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
-    }
-
-}
+    @Override
+    public String getAuthority() {
+        return name;
+    }}

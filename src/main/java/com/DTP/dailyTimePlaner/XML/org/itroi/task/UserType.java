@@ -37,6 +37,7 @@ import com.DTP.dailyTimePlaner.XML.org.itroi.entity.Entity;
 @XmlType(name = "userType", propOrder = {
     "userValue"
 })
+
 public class UserType
     extends Entity
 {

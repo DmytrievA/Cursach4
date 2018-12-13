@@ -1,7 +1,12 @@
 package com.DTP.dailyTimePlaner.repos;
 
 import com.DTP.dailyTimePlaner.XML.org.itroi.task.TaskType;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface TaskTypeRepo extends CrudRepository<TaskType,Integer> {
+import java.util.List;
+
+public interface TaskTypeRepo extends JpaRepository<TaskType, Integer> {
+
+    List<TaskType> findByUserId(Integer id);
+
 }

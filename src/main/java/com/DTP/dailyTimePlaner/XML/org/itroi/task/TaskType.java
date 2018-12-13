@@ -13,14 +13,11 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.DatatypeConfigurationException;
-import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
 import com.DTP.dailyTimePlaner.XML.org.itroi.entity.Entity;
 import javax.persistence.*;
 import java.security.InvalidParameterException;
 import java.util.Date;
-import java.util.GregorianCalendar;
 
 
 /**
@@ -54,7 +51,6 @@ import java.util.GregorianCalendar;
 @XmlType(name = "TaskType", propOrder = {
     "title",
     "date",
-    "dayOfWeek",
     "time",
     "duration",
     "description",
@@ -104,14 +100,13 @@ public class TaskType
             nullable = false)
     protected StatusType taskStatus;
 
-    @Transient
-    @XmlElement(name = "DayOfWeek")
-    @XmlSchemaType(name = "string")
-    protected DayOfWeekType dayOfWeek;
 
-    @Transient
+    @ManyToOne
+    @JoinColumn(name="userId",
+            referencedColumnName = "id",
+            nullable = false)
     @XmlElement(required = true)
-    protected UserType user;
+    protected com.DTP.dailyTimePlaner.XML.org.itroi.user.UserType user;
 
     @Transient
     @XmlElement(required = true)
@@ -175,29 +170,14 @@ public class TaskType
         this.date = value;
     }
 
-    /**
-     * Gets the value of the dayOfWeek property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DayOfWeekType }
-     *     
-     */
-    public DayOfWeekType getDayOfWeek() {
-        return dayOfWeek;
+    public StatusType getTaskStatus() {
+        return taskStatus;
     }
 
-    /**
-     * Sets the value of the dayOfWeek property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DayOfWeekType }
-     *     
-     */
-    public void setDayOfWeek(DayOfWeekType value) {
-        this.dayOfWeek = value;
+    public void setTaskStatus(StatusType taskStatus) {
+        this.taskStatus = taskStatus;
     }
+
 
     /**
      * Gets the value of the time property.
@@ -280,7 +260,7 @@ public class TaskType
      *     {@link UserType }
      *     
      */
-    public UserType getUser() {
+    public com.DTP.dailyTimePlaner.XML.org.itroi.user.UserType getUser() {
         return user;
     }
 
@@ -292,7 +272,7 @@ public class TaskType
      *     {@link UserType }
      *     
      */
-    public void setUser(UserType value) {
+    public void setUser(com.DTP.dailyTimePlaner.XML.org.itroi.user.UserType value) {
         this.user = value;
     }
 

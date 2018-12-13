@@ -8,12 +8,15 @@
 
 package com.DTP.dailyTimePlaner.XML.org.itroi.user;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
-import com.DTP.dailyTimePlaner.XML.org.itroi.entity.Entity;
+
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Set;
 
 
 /**
@@ -41,226 +44,141 @@ import com.DTP.dailyTimePlaner.XML.org.itroi.entity.Entity;
  * </pre>
  * 
  * 
- */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "userType", propOrder = {
-    "name",
-    "surname",
-    "email",
-    "login",
-    "password",
-    "gender",
-    "memberOfGroups"
-})
-public class UserType
-    extends Entity
-{
+*/
 
-    @XmlElement(required = true)
-    protected String name;
-    protected String surname;
+@javax.persistence.Entity(name = "user_test")
+public class UserType
+    extends com.DTP.dailyTimePlaner.XML.org.itroi.entity.Entity
+    implements UserDetails {
+
+    @Column(name = "email", columnDefinition = "varchar(100)", nullable = false,unique = true)
     @XmlElement(required = true)
     protected String email;
-    @XmlElement(required = true)
-    protected String login;
+
+    @Column(name = "password", columnDefinition = "varchar(100)", nullable = false)
     @XmlElement(required = true)
     protected String password;
-    protected String gender;
+
+
+    @Column(name = "surname", columnDefinition = "varchar(45)")
     @XmlElement(required = true)
-    protected MemberOfGroups memberOfGroups;
-    @XmlAttribute(name = "role")
+    protected String surname;
+
+    @Column(name = "name", columnDefinition = "varchar(45)")
+    @XmlElement(required = true)
+    protected String name;
+
+    @Column(name = "login", columnDefinition = "varchar(100)", nullable = false)
+    @XmlElement(required = true)
+    protected String login;
+
+    @Column(name = "gender", columnDefinition = "varchar(10)")
+    protected String gender;
+
+    @Column(name = "active", columnDefinition = "BIT(1)", nullable = false)
+    protected boolean active;
+
+    @ManyToOne
+    @JoinColumn(name = "roleId", referencedColumnName = "id", nullable = false)
     protected RoleType role;
 
-    /**
-     * Gets the value of the name property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getName() {
-        return name;
+    public UserType() {
+        this.active = true;
     }
 
-    /**
-     * Sets the value of the name property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setName(String value) {
-        this.name = value;
-    }
-
-    /**
-     * Gets the value of the surname property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getSurname() {
-        return surname;
-    }
-
-    /**
-     * Sets the value of the surname property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setSurname(String value) {
-        this.surname = value;
-    }
-
-    /**
-     * Gets the value of the email property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getEmail() {
-        return email;
-    }
-
-    /**
-     * Sets the value of the email property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setEmail(String value) {
-        this.email = value;
-    }
-
-    /**
-     * Gets the value of the login property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getLogin() {
-        return login;
-    }
-
-    /**
-     * Sets the value of the login property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setLogin(String value) {
-        this.login = value;
-    }
-
-    /**
-     * Gets the value of the password property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getPassword() {
-        return password;
-    }
-
-    /**
-     * Sets the value of the password property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setPassword(String value) {
-        this.password = value;
-    }
-
-    /**
-     * Gets the value of the gender property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getGender() {
-        return gender;
-    }
-
-    /**
-     * Sets the value of the gender property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setGender(String value) {
-        this.gender = value;
-    }
-
-    /**
-     * Gets the value of the memberOfGroups property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link MemberOfGroups }
-     *     
-     */
-    public MemberOfGroups getMemberOfGroups() {
-        return memberOfGroups;
-    }
-
-    /**
-     * Sets the value of the memberOfGroups property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link MemberOfGroups }
-     *     
-     */
-    public void setMemberOfGroups(MemberOfGroups value) {
-        this.memberOfGroups = value;
-    }
-
-    /**
-     * Gets the value of the role property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link RoleType }
-     *     
-     */
     public RoleType getRole() {
         return role;
     }
 
-    /**
-     * Sets the value of the role property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link RoleType }
-     *     
-     */
-    public void setRole(RoleType value) {
-        this.role = value;
+    public void setRole(RoleType role) {
+        this.role = role;
     }
 
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+
+    public void setName(String value) {
+        this.name = value;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String value) {
+        this.surname = value;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String value) {
+        this.email = value;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String value) {
+        this.login = value;
+    }
+
+    @Override
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String value) {
+        this.password = value;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String value) {
+        this.gender = value;
+    }
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return Collections.singleton(role);
+    }
+
+    @Override
+    public String getUsername() {
+        return this.email;
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return isActive();
+    }
 }

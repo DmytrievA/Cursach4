@@ -1,8 +1,9 @@
 <html>
 <body>
-<form action="/logout" method="post">
+<a href="/login">Sign In</a>
+<form action={{action}} method={{method}}>
     <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
-    <input type="submit" value="Sign Out"/>
+    <input type="submit" value={{btnName}}/>
 </form>
 
 </body>

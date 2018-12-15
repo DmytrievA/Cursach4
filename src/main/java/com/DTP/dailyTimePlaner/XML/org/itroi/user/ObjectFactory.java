@@ -65,11 +65,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GroupRole }
+     * Create an instance of {@link GroupRoleType }
      * 
      */
-    public GroupRole createGroupRole() {
-        return new GroupRole();
+    public GroupRoleType createGroupRole() {
+        return new GroupRoleType();
     }
 
     /**

@@ -23,7 +23,7 @@ import java.util.List;
 import java.util.Map;
 
 @Controller
-public class GreetingController {
+public class UserTaskController {
 
     @Autowired
     private UserRepo userRepo;
@@ -31,23 +31,17 @@ public class GreetingController {
     private TaskTypeRepo taskTypeRepo;
     @Autowired
     private StatusTypeRepo statusTypeRepo;
-    @GetMapping("/greeting")
+    @GetMapping("/usertask")
     public String greeting(Map<String, Object> model)
     {
         List<TaskType> tasks = taskTypeRepo
                 .findByUserEmail(SecurityContextHolder.getContext().getAuthentication().getName());
         model.put("tasks", tasks);
-        return "greeting";
+        return "usertask";
     }
 
-    @GetMapping("/main")
-    public String main(Map<String,Object> model) {
-
-        return "main";
-    }
-
-    @PostMapping("/greeting")
-    public String add(
+    @PostMapping("/usertask")
+    public String addTask(
             @RequestParam String name,
             @RequestParam String description,
             @RequestParam String date,
@@ -91,12 +85,6 @@ public class GreetingController {
         taskTypeRepo.save(task);
         Iterable<TaskType> tasks = taskTypeRepo.findByUserEmail(user.getEmail());
         model.put("tasks", tasks);
-        return "greeting";
+        return "usertask";
     }
-
-    @RequestMapping(value = {"", "/", "index.html"})
-    public String index(@AuthenticationPrincipal UserType user) {
-        return "index";
-    }
-
 }

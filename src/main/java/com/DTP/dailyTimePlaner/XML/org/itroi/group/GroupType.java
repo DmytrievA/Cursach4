@@ -8,6 +8,9 @@
 
 package com.DTP.dailyTimePlaner.XML.org.itroi.group;
 
+import javax.persistence.Column;
+import javax.persistence.OneToMany;
+import javax.persistence.Transient;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -44,12 +47,28 @@ import com.DTP.dailyTimePlaner.XML.org.itroi.entity.Entity;
 @XmlType(name = "GroupType", propOrder = {
     "name"
 })
+@javax.persistence.Entity(name = "groupTest")
 public class GroupType
     extends Entity
 {
 
     @XmlElement(required = true)
+    @Column(name = "name",
+            columnDefinition = "VARCHAR(100)",
+            nullable = false)
     protected String name;
+
+    @Transient
+    @OneToMany(mappedBy = "groupTest")
+    protected GroupUserType groupUser;
+
+    public GroupUserType getGroupUser() {
+        return groupUser;
+    }
+
+    public void setGroupUser(GroupUserType groupUser) {
+        this.groupUser = groupUser;
+    }
 
     /**
      * Gets the value of the name property.
@@ -72,6 +91,8 @@ public class GroupType
      *     
      */
     public void setName(String value) {
+        if(name == "" || name == null)
+            throw new IllegalArgumentException("name need to bee set!");
         this.name = value;
     }
 

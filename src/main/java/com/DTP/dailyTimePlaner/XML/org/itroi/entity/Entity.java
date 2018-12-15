@@ -17,7 +17,7 @@ import com.DTP.dailyTimePlaner.XML.org.itroi.group.GroupType;
 import com.DTP.dailyTimePlaner.XML.org.itroi.reminder.ReminderType;
 import com.DTP.dailyTimePlaner.XML.org.itroi.task.StatusType;
 import com.DTP.dailyTimePlaner.XML.org.itroi.task.TaskType;
-import com.DTP.dailyTimePlaner.XML.org.itroi.user.GroupRole;
+import com.DTP.dailyTimePlaner.XML.org.itroi.user.GroupRoleType;
 import javax.persistence.*;
 
 
@@ -45,7 +45,7 @@ import javax.persistence.*;
     StatusType.class,
     com.DTP.dailyTimePlaner.XML.org.itroi.task.UserType.class,
     com.DTP.dailyTimePlaner.XML.org.itroi.user.UserType.class,
-    GroupRole.class,
+    GroupRoleType.class,
     GroupType.class,
     ReminderType.class
 })

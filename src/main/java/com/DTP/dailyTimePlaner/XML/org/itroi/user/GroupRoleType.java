@@ -8,6 +8,7 @@
 
 package com.DTP.dailyTimePlaner.XML.org.itroi.user;
 
+import javax.persistence.Column;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -26,7 +27,7 @@ import com.DTP.dailyTimePlaner.XML.org.itroi.entity.Entity;
  *   &lt;complexContent>
  *     &lt;extension base="{http://www.itroi.org/entity}Entity">
  *       &lt;sequence>
- *         &lt;element name="groupRoleName" type="{http://www.itroi.org/user}groupRoleName"/>
+ *         &lt;element name="name" type="{http://www.itroi.org/user}name"/>
  *       &lt;/sequence>
  *     &lt;/extension>
  *   &lt;/complexContent>
@@ -37,38 +38,40 @@ import com.DTP.dailyTimePlaner.XML.org.itroi.entity.Entity;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "groupRole", propOrder = {
-    "groupRoleName"
+        "name"
 })
-public class GroupRole
+@javax.persistence.Entity(name = "groupRole")
+public class GroupRoleType
     extends Entity
 {
 
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
-    protected GroupRoleName groupRoleName;
+    @Column(name = "name",columnDefinition = "VARCHAR(15)",nullable = false,unique = true)
+    protected String name;
 
     /**
-     * Gets the value of the groupRoleName property.
+     * Gets the value of the name property.
      * 
      * @return
      *     possible object is
      *     {@link GroupRoleName }
      *     
      */
-    public GroupRoleName getGroupRoleName() {
-        return groupRoleName;
+    public String getName() {
+        return name;
     }
 
     /**
-     * Sets the value of the groupRoleName property.
+     * Sets the value of the name property.
      * 
      * @param value
      *     allowed object is
      *     {@link GroupRoleName }
      *     
      */
-    public void setGroupRoleName(GroupRoleName value) {
-        this.groupRoleName = value;
+    public void setName(String value) {
+        this.name = value;
     }
 
 }

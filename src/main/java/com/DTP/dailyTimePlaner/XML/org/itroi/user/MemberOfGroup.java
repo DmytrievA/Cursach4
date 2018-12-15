@@ -45,7 +45,7 @@ public class MemberOfGroup {
     @XmlElement(required = true)
     protected GroupType group;
     @XmlElement(required = true)
-    protected GroupRole groupRole;
+    protected GroupRoleType groupRole;
 
     /**
      * Gets the value of the group property.
@@ -76,10 +76,10 @@ public class MemberOfGroup {
      * 
      * @return
      *     possible object is
-     *     {@link GroupRole }
+     *     {@link GroupRoleType }
      *     
      */
-    public GroupRole getGroupRole() {
+    public GroupRoleType getGroupRole() {
         return groupRole;
     }
 
@@ -88,10 +88,10 @@ public class MemberOfGroup {
      * 
      * @param value
      *     allowed object is
-     *     {@link GroupRole }
+     *     {@link GroupRoleType }
      *     
      */
-    public void setGroupRole(GroupRole value) {
+    public void setGroupRole(GroupRoleType value) {
         this.groupRole = value;
     }
 

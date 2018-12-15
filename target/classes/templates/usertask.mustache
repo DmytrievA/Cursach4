@@ -1,6 +1,11 @@
 <html>
 <body>
 <div>
+    <div class="nav">
+        <a href = "/">Main Page</a>
+        <a href = "/groups">My Groups</a>
+        <a href = "/newtask">New Tasks</a>
+    </div>
     <form action="/logout" method="post">
         <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
         <input type="submit" value="Sign Out"/>
@@ -24,13 +29,7 @@
         <button type="submit">Добавить</button>
     </form>
 </div>
-<div>
-    <h3>{{#taskState}}
-            {{taskState}}<br/>
-            {{time}}<br/>
-        {{/taskState}}
-    </h3>
-</div>
+
 <div>
     <div>Список заданий</div>
     {{#tasks}}

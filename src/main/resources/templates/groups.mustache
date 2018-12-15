@@ -1,16 +1,28 @@
 <html>
     <div class="nav">
         <a href="/usertask">MyTasks</a>
+        <a href="/groups">MyGroups</a>
         <a href="/">Main Page</a>
     </div>
+    <form action="/logout" method="post">
+        <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+        <input type="submit" value="Sign Out"/>
+    </form>
     <body>
     {{#groups}}
         <form method="post">
-            <input type="text" value="{{name}}" disabled="disabled">
+            <input type="text" value="{{name}}" name="groupName" disabled="disabled" />
+            <input type="hidden" value="{{id}}" name="groupId" />
             <br><input type="submit" value="Show more">
             <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
         </form>
         <hr>
     {{/groups}}
+
+    {{#users}}
+        <li>
+            {{.}}
+        </li>
+    {{/users}}
     </body>
 </html>

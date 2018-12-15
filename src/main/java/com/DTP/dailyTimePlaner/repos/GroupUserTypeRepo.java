@@ -18,4 +18,7 @@ public interface GroupUserTypeRepo extends JpaRepository<GroupUserType,Integer> 
             "(group_user_test gu INNER JOIN group_test g ON gu.group = g.id) " +
             "INNER JOIN user_test u ON gu.user = u.email WHERE gu.user = ?1", nativeQuery = true)
     List<String> findGroupNameByUserEmail(String userEmail);
+
+    @Query(value = "SELECT gu.user FROM group_user_test gu WHERE gu.group = ?1", nativeQuery = true)
+    List<String> findUsersByGroupId(Integer groupId);
 }

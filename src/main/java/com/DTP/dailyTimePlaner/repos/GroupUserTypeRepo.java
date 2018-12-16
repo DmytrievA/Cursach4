@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 public interface GroupUserTypeRepo extends JpaRepository<GroupUserType,Integer> {
@@ -21,4 +22,20 @@ public interface GroupUserTypeRepo extends JpaRepository<GroupUserType,Integer> 
 
     @Query(value = "SELECT gu.user FROM group_user_test gu WHERE gu.group = ?1", nativeQuery = true)
     List<String> findUsersByGroupId(Integer groupId);
+
+    @Query(value = "SELECT gr.name FROM group_role AS gr LEFT JOIN group_user_test AS gu ON gr.id = gu.role " +
+            "WHERE gu.group = ?1 AND gu.user = ?2", nativeQuery = true)
+    String findUserGroupRole(Integer groupId, String userName);
+
+    @Query(value = "SELECT u.email FROM group_user_test gu LEFT JOIN user_test u ON u.email = gu.user " +
+            "WHERE gu.group = ?1", nativeQuery = true)
+    List<String> findUserEmailByGroupId(Integer Id);
+
+    @Query(value = "SELECT u.email FROM user_test u " +
+            "WHERE u.email NOT IN (SELECT gr.user FROM group_user_test gr WHERE gr.group = ?1) " +
+            "AND u.email <> ?2", nativeQuery = true)
+    List<String> findUserEmailNotInGroupById(Integer Id,String userEmail);
+
+    @Transactional
+    void deleteByUserEmailAndGroupId(String userName, Integer groupId);
 }

@@ -1,0 +1,24 @@
+<html>
+<body>
+<div class="nav">
+    <a href = "/">Main Page</a>
+    <a href = "/groups">My Groups</a>
+    <a href = "/newtask">New Tasks</a>
+</div>
+    {{#currentGroupName}}
+        {{currentGroupName}}<br>
+    {{/currentGroupName}}
+    {{#users}}
+        <form method="post">
+            <input type="text" name="userName", value="{{.}}"/>
+            {{#admin}}
+                <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+                <br><input type="submit" value="Delete User"/>
+            {{/admin}}
+        </form>
+    {{/users}}
+    {{#admin}}
+    <a href="/addgroupuser">Add new user</a>
+    {{/admin}}
+</body>
+</html>

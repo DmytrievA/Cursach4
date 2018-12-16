@@ -58,18 +58,6 @@ public class GroupType
             nullable = false)
     protected String name;
 
-    @Transient
-    @OneToMany(mappedBy = "groupTest")
-    protected GroupUserType groupUser;
-
-    public GroupUserType getGroupUser() {
-        return groupUser;
-    }
-
-    public void setGroupUser(GroupUserType groupUser) {
-        this.groupUser = groupUser;
-    }
-
     /**
      * Gets the value of the name property.
      * 
@@ -91,7 +79,7 @@ public class GroupType
      *     
      */
     public void setName(String value) {
-        if(name == "" || name == null)
+        if(value == "" || value == null)
             throw new IllegalArgumentException("name need to bee set!");
         this.name = value;
     }

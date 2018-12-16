@@ -8,15 +8,15 @@ import com.DTP.dailyTimePlaner.repos.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpSession;
 import javax.xml.datatype.DatatypeConfigurationException;
+import java.security.Principal;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.List;
@@ -32,10 +32,19 @@ public class UserTaskController {
     @Autowired
     private StatusTypeRepo statusTypeRepo;
     @GetMapping("/usertask")
-    public String greeting(Map<String, Object> model)
+    public String greeting(Map<String, Object> model,
+                           final Principal principal,
+                           HttpSession session)
     {
+        String userName ="";
+        if(null != principal)
+            userName = principal.getName();
+
+        UserType currentUser = userRepo.findByEmail(userName);
+        session.setAttribute("currentUser",currentUser);
+
         List<TaskType> tasks = taskTypeRepo
-                .findByUserEmail(SecurityContextHolder.getContext().getAuthentication().getName());
+                .findByUserEmail(userName);
         model.put("tasks", tasks);
         return "usertask";
     }
@@ -48,16 +57,11 @@ public class UserTaskController {
             @RequestParam String timeFinish,
             @RequestParam String timeStart,
             @RequestParam String taskState,
+            HttpSession session,
             Map<String,Object> model) throws DatatypeConfigurationException {
         date = date.replace('T',' ');
-        UserType user;
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        if (!(authentication instanceof AnonymousAuthenticationToken)) {
-            String currentUserName = authentication.getName();
-            user = userRepo.findByEmail(currentUserName);
-        }
-        else
-            return "redirect:/error";
+        UserType user = (UserType) session.getAttribute("currentUser");
+
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");
         java.util.Date time;
         TaskType task = new TaskType();

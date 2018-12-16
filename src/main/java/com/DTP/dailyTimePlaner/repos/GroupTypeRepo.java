@@ -9,4 +9,5 @@ import java.util.List;
 public interface GroupTypeRepo extends JpaRepository<GroupType,Integer> {
     List<GroupType> findByNameIn(List<String> name);
 
+    GroupType findFirstByNameOrderByIdDesc(String name);
 }

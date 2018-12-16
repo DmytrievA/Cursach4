@@ -13,4 +13,6 @@ public interface UserRepo extends JpaRepository<UserType,String> {
     List<UserType> findByEmailIn(List<String> emails);
 
     UserType findByEmail(String email);
+
+    List<UserType> findByEmailNotIn(List<String> emails);
 }

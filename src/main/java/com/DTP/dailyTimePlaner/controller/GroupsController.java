@@ -1,8 +1,6 @@
 package com.DTP.dailyTimePlaner.controller;
 
 import com.DTP.dailyTimePlaner.XML.org.itroi.group.GroupType;
-import com.DTP.dailyTimePlaner.XML.org.itroi.group.GroupUserType;
-import com.DTP.dailyTimePlaner.XML.org.itroi.user.UserType;
 import com.DTP.dailyTimePlaner.repos.GroupTypeRepo;
 import com.DTP.dailyTimePlaner.repos.GroupUserTypeRepo;
 import com.DTP.dailyTimePlaner.repos.UserRepo;
@@ -12,6 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpSession;
+import javax.transaction.Transactional;
 import java.security.Principal;
 import java.util.List;
 import java.util.Map;
@@ -41,13 +41,53 @@ public class GroupsController {
         return "groups";
     }
 
+    @Transactional
     @PostMapping("/groups")
+    public String addGroup(Map<String,Object> model){
+        return "groups";
+    }
+
+    @GetMapping("/selectedGroup")
     public String showGroupInfo(@RequestParam String groupId,
+                                @RequestParam String groupName,
+                                final Principal principal,
+                                HttpSession session,
                                 Map<String,Object> model)
     {
+        GroupType group = new GroupType();
+        group.setName(groupName);
+        group.setId(Integer.parseInt(groupId));
+        session.setAttribute("currentGroup",group);
+        if(principal ==null)
+            return "redirect:/logout";
+
+        String userName = principal.getName();
+        String userRole = groupUserTypeRepo.findUserGroupRole(Integer.parseInt(groupId),userName);
+        boolean admin = "admin".equals(userRole);
+        model.put("admin",admin);
         List<String> userEmails = groupUserTypeRepo.findUsersByGroupId(Integer.parseInt(groupId));
-        List<UserType> users = userRepo.findByEmailIn(userEmails);
         model.put("users",userEmails);
-        return "groups";
+        return "selectedGroup";
+    }
+
+    @PostMapping("/selectedGroup")
+    public String deleteUser(@RequestParam String userName,
+                             HttpSession session,
+                             Map<String,Object> model)
+    {
+        GroupType group = (GroupType)session.getAttribute("currentGroup");
+        model.put("currentGroupName",group.getName());
+        groupUserTypeRepo.deleteByUserEmailAndGroupId(userName,group.getId());
+        List<String> userEmails = groupUserTypeRepo.findUsersByGroupId(group.getId());
+
+        if(userEmails.size() == 0)
+            return "redirect:/groups";
+
+        String userRole = groupUserTypeRepo
+                .findUserGroupRole(group.getId(),userName);
+        boolean admin = "admin".equals(userRole);
+        model.put("admin",admin);
+        model.put("users",userEmails);
+        return "selectedGroup";
     }
 }

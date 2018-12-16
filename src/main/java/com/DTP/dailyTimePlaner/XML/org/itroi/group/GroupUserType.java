@@ -11,11 +11,11 @@ import javax.persistence.ManyToOne;
 public class GroupUserType extends Entity {
 
     @ManyToOne
-    @JoinColumn(name = "group",referencedColumnName = "id",nullable = false)
+    @JoinColumn(name = "`group`",referencedColumnName = "id",nullable = false)
     protected GroupType group;
 
     @ManyToOne
-    @JoinColumn(name = "user",referencedColumnName = "email",nullable = false)
+    @JoinColumn(name = "`user`",referencedColumnName = "email",nullable = false)
     protected UserType user;
 
     @ManyToOne

@@ -10,10 +10,12 @@
     {{/currentGroupName}}
     {{#users}}
         <form method="post">
-            <input type="text" name="userName", value="{{.}}"/>
+            <input type="text" name="userName", value="{{user.email}}" readonly="readonly"/>
+            <strong>{{role.name}}</strong><br>
             {{#admin}}
                 <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
-                <br><input type="submit" value="Delete User"/>
+                <input type="submit" value="Delete User" /><br>
+                <input type="submit" formaction="/makeadmin" value="Make Admin"/><br>
             {{/admin}}
         </form>
     {{/users}}

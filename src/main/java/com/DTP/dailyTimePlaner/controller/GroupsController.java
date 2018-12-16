@@ -1,6 +1,7 @@
 package com.DTP.dailyTimePlaner.controller;
 
 import com.DTP.dailyTimePlaner.XML.org.itroi.group.GroupType;
+import com.DTP.dailyTimePlaner.XML.org.itroi.group.GroupUserType;
 import com.DTP.dailyTimePlaner.repos.GroupTypeRepo;
 import com.DTP.dailyTimePlaner.repos.GroupUserTypeRepo;
 import com.DTP.dailyTimePlaner.repos.UserRepo;
@@ -29,7 +30,12 @@ public class GroupsController {
     private UserRepo userRepo;
 
     @GetMapping("/groups")
-    public String allGroups(Map<String,Object> model, final Principal principal){
+    public String allGroups(Map<String,Object> model,
+                            final Principal principal,
+                            HttpSession session)
+    {
+        if(session.getAttribute("currentGroup")!=null)
+            session.removeAttribute("currentGroup");
         if(principal ==null)
             return "groups";
         String userName = principal.getName();
@@ -48,25 +54,29 @@ public class GroupsController {
     }
 
     @GetMapping("/selectedGroup")
-    public String showGroupInfo(@RequestParam String groupId,
-                                @RequestParam String groupName,
+    public String showGroupInfo(@RequestParam(required = false) String groupId,
+                                @RequestParam(required = false) String groupName,
                                 final Principal principal,
                                 HttpSession session,
                                 Map<String,Object> model)
     {
-        GroupType group = new GroupType();
-        group.setName(groupName);
-        group.setId(Integer.parseInt(groupId));
-        session.setAttribute("currentGroup",group);
+        GroupType group = (GroupType)session.getAttribute("currentGroup");
+        if(group ==null) {
+            group = new GroupType();
+            group.setName(groupName);
+            group.setId(Integer.parseInt(groupId));
+            session.setAttribute("currentGroup",group);
+        }
+
         if(principal ==null)
             return "redirect:/logout";
 
         String userName = principal.getName();
-        String userRole = groupUserTypeRepo.findUserGroupRole(Integer.parseInt(groupId),userName);
+        String userRole = groupUserTypeRepo.findUserGroupRole(group.getId(),userName);
         boolean admin = "admin".equals(userRole);
         model.put("admin",admin);
-        List<String> userEmails = groupUserTypeRepo.findUsersByGroupId(Integer.parseInt(groupId));
-        model.put("users",userEmails);
+        List<GroupUserType> users = groupUserTypeRepo.findByGroup_Id(group.getId());
+        model.put("users",users);
         return "selectedGroup";
     }
 
@@ -78,16 +88,6 @@ public class GroupsController {
         GroupType group = (GroupType)session.getAttribute("currentGroup");
         model.put("currentGroupName",group.getName());
         groupUserTypeRepo.deleteByUserEmailAndGroupId(userName,group.getId());
-        List<String> userEmails = groupUserTypeRepo.findUsersByGroupId(group.getId());
-
-        if(userEmails.size() == 0)
-            return "redirect:/groups";
-
-        String userRole = groupUserTypeRepo
-                .findUserGroupRole(group.getId(),userName);
-        boolean admin = "admin".equals(userRole);
-        model.put("admin",admin);
-        model.put("users",userEmails);
-        return "selectedGroup";
+        return "redirect:/selectedGroup";
     }
 }

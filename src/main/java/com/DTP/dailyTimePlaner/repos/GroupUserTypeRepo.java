@@ -13,7 +13,9 @@ import java.util.List;
 public interface GroupUserTypeRepo extends JpaRepository<GroupUserType,Integer> {
     List<GroupUserType> findByUser(String user);
 
-    List<GroupUserType> findByGroup(Integer group);
+    List<GroupUserType> findByGroup_Id(Integer group);
+
+    GroupUserType findByGroup_IdAndUserEmail(Integer id, String email);
 
     @Query(value = "SELECT g.name FROM " +
             "(group_user_test gu INNER JOIN group_test g ON gu.group = g.id) " +

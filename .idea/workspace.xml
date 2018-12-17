@@ -1,41 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="001c8671-e291-473b-b6f4-3f080fa59930" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DBModel.mwb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/task/GivenTasks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/task/RateLevel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/task/TaskPrefab.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/GiveTaskController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/NewTaskController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/repos/GivenTasksRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/repos/RateLevelRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/changegroupmember.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/givetask.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/changegroupmember.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/givetask.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/task/TaskType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/task/TaskType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/config/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/config/MvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/GroupsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/GroupsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/MakeAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/ChangeGroupMemberController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/RegistrationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/UserTaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/UserTaskController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/repos/GroupUserTypeRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/repos/GroupUserTypeRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/repos/StatusTypeRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/repos/StatusTypeRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/repos/TaskTypeRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/repos/TaskTypeRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/groups.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/groups.mustache" afterDir="false" />
+    <list default="true" id="e15483b2-62d4-4beb-8811-62c3ddde323d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/task/GivenTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/task/GivenTasks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/GiveTaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/GiveTaskController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/newtask.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/newtask.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/selectedGroup.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/selectedGroup.mustache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/usertask.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/usertask.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/groups.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/groups.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/main.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/registration.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/registration.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/selectedGroup.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/selectedGroup.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/usertask.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/usertask.mustache" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -66,14 +36,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/repos/GivenTasksRepo.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/newtask.mustache">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="34">
+              <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/usertask.mustache">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -81,8 +57,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/task/GivenTasks.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="238">
+              <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#GivenTasks#0;class#GivenTasks#0" />
@@ -94,7 +70,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/NewTaskController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
+            <state relative-caret-position="416">
               <caret line="25" selection-start-line="25" selection-end-line="25" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -104,28 +80,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/newtask.mustache">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="45" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/usertask.mustache">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="73" lean-forward="true" selection-start-line="23" selection-start-column="73" selection-end-line="23" selection-end-column="73" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/GiveTaskController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="69" column="63" selection-start-line="69" selection-start-column="63" selection-end-line="69" selection-end-column="63" />
+            <state relative-caret-position="121">
+              <caret line="59" column="46" selection-start-line="59" selection-start-column="46" selection-end-line="59" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -186,7 +144,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/task/GivenClass.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/repos/TaskTypeRepo.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/registration.mustache" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/usertask.mustache" />
         <option value="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/RegistrationController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/groups.mustache" />
         <option value="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/GroupsController.java" />
@@ -204,9 +161,10 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/newtak.mustache" />
         <option value="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/NewTaskController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/repos/GivenTasksRepo.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/usertask.mustache" />
         <option value="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/task/GivenTasks.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/newtask.mustache" />
         <option value="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/GiveTaskController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/newtask.mustache" />
       </list>
     </option>
   </component>
@@ -508,7 +466,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="167993000" />
+    <option name="totallyTimeSpent" value="168256000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -523,7 +481,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24281392" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24281392" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -942,13 +900,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/newtak.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/newtak.mustache" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/UserTaskController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-52">
@@ -978,8 +930,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/usertask.mustache">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="73" lean-forward="true" selection-start-line="23" selection-start-column="73" selection-end-line="23" selection-end-column="73" />
+        <state relative-caret-position="204">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -995,8 +947,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/XML/org/itroi/task/GivenTasks.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="238">
+          <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#GivenTasks#0;class#GivenTasks#0" />
@@ -1004,16 +956,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/newtask.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="45" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/NewTaskController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
+        <state relative-caret-position="416">
           <caret line="25" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1023,11 +968,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/GiveTaskController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="69" column="63" selection-start-line="69" selection-start-column="63" selection-end-line="69" selection-end-column="63" />
+        <state relative-caret-position="121">
+          <caret line="59" column="46" selection-start-line="59" selection-start-column="46" selection-end-line="59" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/newtask.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
         </state>
       </provider>
     </entry>

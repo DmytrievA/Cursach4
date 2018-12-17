@@ -58,20 +58,6 @@ public class GiveTaskController {
                           @RequestParam(required = false) MultipartFile taskDock,
                           HttpSession session) throws IOException, ParseException {
         GivenTasks newTask = new GivenTasks();
-        //dateStart = dateStart.replace('T', ' ');
-        //dateFinish = dateFinish.replace('T',' ');
-        if(taskDock != null && !taskDock.getOriginalFilename().isEmpty())
-        {
-            File uploadDir = new File(path);
-            if(!uploadDir.exists())
-                uploadDir.mkdir();
-            String namePrefix = UUID.randomUUID().toString();
-            String resultFileName = namePrefix + "." +
-                    getFileName(taskDock.getOriginalFilename());
-
-            taskDock.transferTo(new File(path + "/" + resultFileName));
-            newTask.setTaskDoc(resultFileName);
-        }
         newTask.setDate((new SimpleDateFormat("YYYY-MM-dd'T'hh:mm")).parse(dateStart));
         newTask.setFinishDate((new SimpleDateFormat("YYYY-MM-dd'T'hh:mm")).parse(dateFinish));
         newTask.setTitle(Title);

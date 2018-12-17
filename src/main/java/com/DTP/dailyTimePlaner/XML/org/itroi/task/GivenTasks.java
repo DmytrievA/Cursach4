@@ -19,6 +19,7 @@ public class GivenTasks extends TaskPrefab {
             nullable = false)
     protected com.DTP.dailyTimePlaner.XML.org.itroi.user.UserType mentor;
 
+    @Transient
     @Column(name = "result_file", columnDefinition = "TEXT")
     protected String file;
 
@@ -28,6 +29,7 @@ public class GivenTasks extends TaskPrefab {
     @Column(name = "comments", columnDefinition = "TEXT")
     protected String comments;
 
+    @Transient
     @Column(name = "task_doc",columnDefinition = "TEXT")
     protected String taskDoc;
 

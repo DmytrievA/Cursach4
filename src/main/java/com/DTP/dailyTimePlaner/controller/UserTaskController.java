@@ -1,5 +1,6 @@
 package com.DTP.dailyTimePlaner.controller;
 
+import com.DTP.dailyTimePlaner.XML.org.itroi.task.StatusType;
 import com.DTP.dailyTimePlaner.XML.org.itroi.task.TaskType;
 import com.DTP.dailyTimePlaner.XML.org.itroi.user.UserType;
 import com.DTP.dailyTimePlaner.repos.StatusTypeRepo;
@@ -43,8 +44,10 @@ public class UserTaskController {
         UserType currentUser = userRepo.findByEmail(userName);
         session.setAttribute("currentUser",currentUser);
 
+
+        model.put("states",statusTypeRepo.findAll());
         List<TaskType> tasks = taskTypeRepo
-                .findByUserEmail(userName);
+                .findByUserEmailOrderByDateDesc(userName);
         model.put("tasks", tasks);
         return "usertask";
     }
@@ -59,10 +62,9 @@ public class UserTaskController {
             @RequestParam String taskState,
             HttpSession session,
             Map<String,Object> model) throws DatatypeConfigurationException {
-        date = date.replace('T',' ');
         UserType user = (UserType) session.getAttribute("currentUser");
 
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("YYYY-MM-dd");
         java.util.Date time;
         TaskType task = new TaskType();
         try {
@@ -83,12 +85,12 @@ public class UserTaskController {
 
         task.setTitle(name);
         task.setDescription(description);
-        task.setTaskState(statusTypeRepo.findById(Integer.parseInt(taskState)).get());
+        task.setTaskStatus(statusTypeRepo.findById(Integer.parseInt(taskState)).get());
         task.setUser(user);
 
         taskTypeRepo.save(task);
-        Iterable<TaskType> tasks = taskTypeRepo.findByUserEmail(user.getEmail());
+        Iterable<TaskType> tasks = taskTypeRepo.findByUserEmailOrderByDateDesc(user.getEmail());
         model.put("tasks", tasks);
-        return "usertask";
+        return "redirect:/usertask";
     }
 }

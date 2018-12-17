@@ -11,6 +11,10 @@
         <input type="submit" value="Sign Out"/>
     </form>
 </div>
+
+<strong><h3>{{#date}}{{date}}{{/date}}</h3></strong>
+<strong><h3>{{#date}}{{date2}}{{/date}}</h3></strong>
+
 <div>
     <form method="post">
         <input type="date" name="date"/><br>
@@ -19,11 +23,9 @@
         <input type="text" name="name" placeholder="Введите название"/><br>
         <input type="text" name="description" placeholder="Введите описание"/><br>
         <select name="taskState">
-            <option value="1">Ожидает</option>
-            <option value="2">В процессе</option>
-            <option value="3">Завершён</option>
-            <option value="4">Провален</option>
-            <option value="5">Отклонен</option>
+            {{#states}}
+            <option value="{{id}}">{{name}}</option>
+            {{/states}}
         </select>
         <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
         <button type="submit">Добавить</button>

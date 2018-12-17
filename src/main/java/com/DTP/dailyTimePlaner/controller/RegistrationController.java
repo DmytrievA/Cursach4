@@ -32,8 +32,8 @@ public class RegistrationController {
         UserType userFromDB = userRepo.findByEmail(user.getEmail());
 
         if(userFromDB != null){
-            model.put("message","Email is using by another user");
-            return "registration";
+                model.put("message","Email is using by another user");
+                return "registration";
         }
         user.setRole(roleTypeRepo.findByName("user"));
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));

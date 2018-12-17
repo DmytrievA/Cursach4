@@ -4,5 +4,13 @@
             <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
             <input type="submit" value="Sign Out"/>
         </form>
-    </body>s
+        {{#tasks}}
+            {{title}}<br/>
+            {{mentor.email}}<br/>
+            {{level.name}}<br/>
+            {{date}}<br/>
+            {{finishDate}}<br/>
+            <a href="/uploadedfiles/{{taskDoc}}" download>FILE</a>
+        {{/tasks}}
+    </body>
 </html>

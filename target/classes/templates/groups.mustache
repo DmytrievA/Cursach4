@@ -12,9 +12,10 @@
     <body>
     {{#groups}}
         <form method="get" action="/selectedGroup">
-            <input type="text" value="{{name}}" name="groupName"/>
+            <input type="text" value="{{name}}" name="groupName" readonly="readonly"/>
             <input type="hidden" value="{{id}}" name="groupId" />
-            <br><input type="submit" value="Show more">
+            <input type="submit" value="Show more"><br>
+            <input type="submit" value="Leave group" formmethod="post" formaction="/leavegroup">
             <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
         </form>
         <hr>

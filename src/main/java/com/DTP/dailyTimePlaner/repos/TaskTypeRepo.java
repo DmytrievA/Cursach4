@@ -9,4 +9,5 @@ public interface TaskTypeRepo extends JpaRepository<TaskType, Integer> {
 
     List<TaskType> findByUserEmail(String id);
 
+    List<TaskType> findByUserEmailOrderByDateDesc(String userEmail);
 }

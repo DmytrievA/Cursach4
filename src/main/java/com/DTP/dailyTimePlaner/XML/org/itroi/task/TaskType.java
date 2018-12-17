@@ -8,296 +8,34 @@
 
 package com.DTP.dailyTimePlaner.XML.org.itroi.task;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
-import com.DTP.dailyTimePlaner.XML.org.itroi.entity.Entity;
-import javax.persistence.*;
-import java.security.InvalidParameterException;
+import javax.persistence.Column;
 import java.util.Date;
 
-
-/**
- * <p>Java class for TaskType complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * 
- * <pre>
- * &lt;complexType name="TaskType">
- *   &lt;complexContent>
- *     &lt;extension base="{http://www.itroi.org/entity}Entity">
- *       &lt;sequence>
- *         &lt;element name="title" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="date" type="{http://www.w3.org/2001/XMLSchema}date"/>
- *         &lt;element name="DayOfWeek" type="{http://www.itroi.org/task}DayOfWeekType" minOccurs="0"/>
- *         &lt;element name="time" type="{http://www.w3.org/2001/XMLSchema}time"/>
- *         &lt;element name="duration" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
- *         &lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="status" type="{http://www.itroi.org/task}statusType"/>
- *         &lt;element name="user" type="{http://www.itroi.org/task}userType"/>
- *         &lt;element name="reminders" type="{http://www.itroi.org/task}RemindersType"/>
- *       &lt;/sequence>
- *     &lt;/extension>
- *   &lt;/complexContent>
- * &lt;/complexType>
- * </pre>
- * 
- * 
- */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TaskType", propOrder = {
-    "title",
-    "date",
-    "time",
-    "duration",
-    "description",
-    "user",
-    "reminders"
-})
 @javax.persistence.Entity(name = "taskXMLTest")
-public class TaskType
-    extends Entity
+public class TaskType extends TaskPrefab
 {
-    @Column(name = "TASK_TITLE",
-            nullable = false,
-            columnDefinition = "VARCHAR(250)")
-    @XmlElement(required = true)
-    protected String title;
-
-    @Column(name = "TASK_DATE",
-            nullable = false,
-            columnDefinition = "DATE")
-    @XmlElement(required = true)
-    @XmlSchemaType(name = "date")
-    protected Date date;
-
+    @Column(name="TASK_DURATION",
+            columnDefinition = "TIME")
+    protected Date duration;
 
     @Column(name = "TASK_TIME",
             columnDefinition = "TIME",
             nullable = false)
-    @XmlElement(required = true)
-    @XmlSchemaType(name = "time")
     protected Date time;
 
-    @Column(name="TASK_DURATION",
-            columnDefinition = "TIME")
-    @XmlSchemaType(name = "time")
-    protected Date duration;
-
-    @Column(name = "TASK_DESCRIPTION",
-        columnDefinition = "TEXT",
-        nullable = false)
-    @XmlElement(required = true)
-    protected String description;
-
-
-    @ManyToOne
-    @JoinColumn(name = "id_state_task",
-            referencedColumnName = "id",
-            nullable = false)
-    protected StatusType taskStatus;
-
-
-    @ManyToOne
-    @JoinColumn(name="userEmail",
-            referencedColumnName = "email",
-            nullable = false)
-    @XmlElement(required = true)
-    protected com.DTP.dailyTimePlaner.XML.org.itroi.user.UserType user;
-
-    @Transient
-    @XmlElement(required = true)
-    protected RemindersType reminders;
-
-    public StatusType getTaskState() {
-        return taskStatus;
-    }
-
-    public void setTaskState(StatusType taskState) {
-        if(taskState.getId()<=0 || taskState.getId()>5)
-            throw new InvalidParameterException("wrong FK");
-        this.taskStatus = taskState;
-    }
-
-    /**
-     * Gets the value of the title property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getTitle() {
-        return title;
-    }
-
-    /**
-     * Sets the value of the title property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setTitle(String value) {
-        this.title = value;
-    }
-
-    /**
-     * Gets the value of the date property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public Date getDate() {
-        return date;
-    }
-
-    /**
-     * Sets the value of the date property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setDate(Date value) {
-        this.date = value;
-    }
-
-    public StatusType getTaskStatus() {
-        return taskStatus;
-    }
-
-    public void setTaskStatus(StatusType taskStatus) {
-        this.taskStatus = taskStatus;
-    }
-
-
-    /**
-     * Gets the value of the time property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public Date getTime() {
-        return time;
-    }
-
-    /**
-     * Sets the value of the time property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setTime(Date value) {
-        this.time = value;
-    }
-
-    /**
-     * Gets the value of the duration property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
     public Date getDuration() {
         return duration;
     }
 
-    /**
-     * Sets the value of the duration property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setDuration(Date value) {
-        this.duration = value;
+    public void setDuration(Date duration) {
+        this.duration = duration;
     }
 
-    /**
-     * Gets the value of the description property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getDescription() {
-        return description;
+    public Date getTime() {
+        return time;
     }
 
-    /**
-     * Sets the value of the description property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setDescription(String value) {
-        this.description = value;
+    public void setTime(Date time) {
+        this.time = time;
     }
-
-
-    /**
-     * Gets the value of the user property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link UserType }
-     *     
-     */
-    public com.DTP.dailyTimePlaner.XML.org.itroi.user.UserType getUser() {
-        return user;
-    }
-
-    /**
-     * Sets the value of the user property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link UserType }
-     *     
-     */
-    public void setUser(com.DTP.dailyTimePlaner.XML.org.itroi.user.UserType value) {
-        this.user = value;
-    }
-
-    /**
-     * Gets the value of the reminders property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link RemindersType }
-     *     
-     */
-    public RemindersType getReminders() {
-        return reminders;
-    }
-
-    /**
-     * Sets the value of the reminders property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link RemindersType }
-     *     
-     */
-    public void setReminders(RemindersType value) {
-        this.reminders = value;
-    }
-
 }

@@ -90,4 +90,16 @@ public class GroupsController {
         groupUserTypeRepo.deleteByUserEmailAndGroupId(userName,group.getId());
         return "redirect:/selectedGroup";
     }
+
+    @PostMapping("/leavegroup")
+    public String leveGroup(@RequestParam String groupId,
+                            final Principal principal)
+    {
+        if(principal.getName().isEmpty())
+            return "redirect:/logout";
+
+        String userName = principal.getName();
+        groupUserTypeRepo.deleteByUserEmailAndGroupId(userName,Integer.parseInt(groupId));
+        return "redirect:/groups";
+    }
 }

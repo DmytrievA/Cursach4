@@ -6,16 +6,18 @@
     <a href = "/newtask">New Tasks</a>
 </div>
     {{#currentGroupName}}
-        {{currentGroupName}}<br>
+        <h3>{{currentGroupName}}</h3><br>
     {{/currentGroupName}}
     {{#users}}
+        <strong>{{role.name}}</strong><br>
         <form method="post">
             <input type="text" name="userName", value="{{user.email}}" readonly="readonly"/>
-            <strong>{{role.name}}</strong><br>
+
             {{#admin}}
                 <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
                 <input type="submit" value="Delete User" /><br>
-                <input type="submit" formaction="/makeadmin" value="Make Admin"/><br>
+                <input type="submit" formmethod="get" formaction="/changegroupmember" value="Change"/>
+                <input type="submit" formaction="/givetask" formmethod="get" value="Give Task"/><br>
             {{/admin}}
         </form>
     {{/users}}

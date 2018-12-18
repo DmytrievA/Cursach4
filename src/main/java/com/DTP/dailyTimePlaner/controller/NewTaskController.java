@@ -1,7 +1,7 @@
 package com.DTP.dailyTimePlaner.controller;
 
-import com.DTP.dailyTimePlaner.XML.org.itroi.task.GivenTasks;
-import com.DTP.dailyTimePlaner.XML.org.itroi.user.UserType;
+import com.DTP.dailyTimePlaner.domain.GivenTasks;
+import com.DTP.dailyTimePlaner.domain.UserType;
 import com.DTP.dailyTimePlaner.repos.GivenTasksRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

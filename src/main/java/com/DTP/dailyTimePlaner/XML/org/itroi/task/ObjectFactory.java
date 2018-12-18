@@ -8,6 +8,10 @@
 
 package com.DTP.dailyTimePlaner.XML.org.itroi.task;
 
+import com.DTP.dailyTimePlaner.domain.ReminderType;
+import com.DTP.dailyTimePlaner.domain.StatusType;
+import com.DTP.dailyTimePlaner.domain.TaskType;
+
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlElementDecl;
 import javax.xml.bind.annotation.XmlRegistry;
@@ -35,14 +39,14 @@ public class ObjectFactory {
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: org.itroi.task
-     * 
+     *
      */
     public ObjectFactory() {
     }
 
     /**
      * Create an instance of {@link TaskType }
-     * 
+     *
      */
     public TaskType createTaskType() {
         return new TaskType();
@@ -50,7 +54,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link StatusType }
-     * 
+     *
      */
     public StatusType createStatusType() {
         return new StatusType();
@@ -58,23 +62,23 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link UserType }
-     * 
+     *
      */
     public UserType createUserType() {
         return new UserType();
     }
 
     /**
-     * Create an instance of {@link RemindersType }
-     * 
+     * Create an instance of {@link ReminderType }
+     *
      */
-    public RemindersType createRemindersType() {
-        return new RemindersType();
+    public ReminderType createRemindersType() {
+        return new ReminderType();
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link TaskType }{@code >}}
-     * 
+     *
      */
     @XmlElementDecl(namespace = "http://www.itroi.org/task", name = "Task")
     public JAXBElement<TaskType> createTask(TaskType value) {

@@ -8,6 +8,8 @@
 
 package com.DTP.dailyTimePlaner.XML.org.itroi.entity;
 
+import com.DTP.dailyTimePlaner.domain.Entity;
+
 import javax.xml.bind.annotation.XmlRegistry;
 
 

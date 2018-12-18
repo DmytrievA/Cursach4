@@ -1,8 +1,9 @@
 package com.DTP.dailyTimePlaner.controller;
 
 
-import com.DTP.dailyTimePlaner.XML.org.itroi.task.GivenTasks;
-import com.DTP.dailyTimePlaner.XML.org.itroi.user.UserType;
+import com.DTP.dailyTimePlaner.domain.GroupType;
+import com.DTP.dailyTimePlaner.domain.GivenTasks;
+import com.DTP.dailyTimePlaner.domain.UserType;
 import com.DTP.dailyTimePlaner.repos.GivenTasksRepo;
 import com.DTP.dailyTimePlaner.repos.RateLevelRepo;
 import com.DTP.dailyTimePlaner.repos.StatusTypeRepo;
@@ -16,12 +17,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpSession;
-import java.io.File;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Map;
-import java.util.UUID;
 
 @Controller
 public class GiveTaskController {
@@ -67,6 +66,7 @@ public class GiveTaskController {
         newTask.setLevel(levelRepo.findById(Integer.parseInt(taskRate)).get());
         newTask.setUser((UserType)session.getAttribute("user"));
         newTask.setTaskStatus(statusTypeRepo.findByName("w"));
+        newTask.setGroup((GroupType)session.getAttribute("currentGroup"));
         givenTasksRepo.save(newTask);
         return "redirect:/selectedGroup";
     }

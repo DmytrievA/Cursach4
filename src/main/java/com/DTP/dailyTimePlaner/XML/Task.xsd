@@ -48,7 +48,7 @@
         </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-    <xs:complexType name="RemindersType">
+    <xs:complexType name="ReminderType">
         <xs:sequence>
             <xs:element type="rem:ReminderType" name="reminder" maxOccurs="5"/>
         </xs:sequence>

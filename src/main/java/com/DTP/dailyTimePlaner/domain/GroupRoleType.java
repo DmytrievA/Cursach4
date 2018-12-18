@@ -6,7 +6,7 @@
 //
 
 
-package com.DTP.dailyTimePlaner.XML.org.itroi.user;
+package com.DTP.dailyTimePlaner.domain;
 
 import javax.persistence.Column;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -14,7 +14,8 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import com.DTP.dailyTimePlaner.XML.org.itroi.entity.Entity;
+
+import com.DTP.dailyTimePlaner.XML.org.itroi.user.GroupRoleName;
 
 
 /**

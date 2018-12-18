@@ -6,9 +6,8 @@
 //
 
 
-package com.DTP.dailyTimePlaner.XML.org.itroi.user;
+package com.DTP.dailyTimePlaner.domain;
 
-import com.DTP.dailyTimePlaner.XML.org.itroi.entity.Entity;
 import org.springframework.security.core.GrantedAuthority;
 
 import javax.persistence.Column;

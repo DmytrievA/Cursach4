@@ -6,7 +6,9 @@
 //
 
 
-package com.DTP.dailyTimePlaner.XML.org.itroi.task;
+package com.DTP.dailyTimePlaner.domain;
+
+import com.DTP.dailyTimePlaner.domain.TaskPrefab;
 
 import javax.persistence.Column;
 import java.util.Date;

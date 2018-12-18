@@ -1,9 +1,9 @@
 package com.DTP.dailyTimePlaner.controller;
 
-import com.DTP.dailyTimePlaner.XML.org.itroi.group.GroupType;
-import com.DTP.dailyTimePlaner.XML.org.itroi.group.GroupUserType;
-import com.DTP.dailyTimePlaner.XML.org.itroi.user.GroupRoleType;
-import com.DTP.dailyTimePlaner.XML.org.itroi.user.UserType;
+import com.DTP.dailyTimePlaner.domain.GroupType;
+import com.DTP.dailyTimePlaner.domain.GroupUserType;
+import com.DTP.dailyTimePlaner.domain.GroupRoleType;
+import com.DTP.dailyTimePlaner.domain.UserType;
 import com.DTP.dailyTimePlaner.repos.GroupRoleTypeRepo;
 import com.DTP.dailyTimePlaner.repos.GroupUserTypeRepo;
 import com.DTP.dailyTimePlaner.repos.UserRepo;

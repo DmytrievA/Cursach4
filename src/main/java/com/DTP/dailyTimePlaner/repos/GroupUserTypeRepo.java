@@ -1,11 +1,8 @@
 package com.DTP.dailyTimePlaner.repos;
 
-import com.DTP.dailyTimePlaner.XML.org.itroi.group.GroupType;
-import com.DTP.dailyTimePlaner.XML.org.itroi.group.GroupUserType;
-import com.DTP.dailyTimePlaner.XML.org.itroi.user.UserType;
+import com.DTP.dailyTimePlaner.domain.GroupUserType;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
 
 import javax.transaction.Transactional;
 import java.util.List;

@@ -12,7 +12,9 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
-import com.DTP.dailyTimePlaner.XML.org.itroi.group.GroupType;
+
+import com.DTP.dailyTimePlaner.domain.GroupRoleType;
+import com.DTP.dailyTimePlaner.domain.GroupType;
 
 
 /**

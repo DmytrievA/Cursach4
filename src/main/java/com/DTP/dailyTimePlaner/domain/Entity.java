@@ -6,18 +6,16 @@
 //
 
 
-package com.DTP.dailyTimePlaner.XML.org.itroi.entity;
+package com.DTP.dailyTimePlaner.domain;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
-import com.DTP.dailyTimePlaner.XML.org.itroi.group.GroupType;
+
 import com.DTP.dailyTimePlaner.XML.org.itroi.reminder.ReminderType;
-import com.DTP.dailyTimePlaner.XML.org.itroi.task.StatusType;
-import com.DTP.dailyTimePlaner.XML.org.itroi.task.TaskType;
-import com.DTP.dailyTimePlaner.XML.org.itroi.user.GroupRoleType;
+
 import javax.persistence.*;
 
 
@@ -44,7 +42,7 @@ import javax.persistence.*;
     TaskType.class,
     StatusType.class,
     com.DTP.dailyTimePlaner.XML.org.itroi.task.UserType.class,
-    com.DTP.dailyTimePlaner.XML.org.itroi.user.UserType.class,
+    UserType.class,
     GroupRoleType.class,
     GroupType.class,
     ReminderType.class

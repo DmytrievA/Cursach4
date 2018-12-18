@@ -9,7 +9,7 @@
         <h3>{{currentGroupName}}</h3><br>
     {{/currentGroupName}}
     {{#users}}
-        <strong>{{role.name}}</strong><br>
+        <strong>{{role.name}}   {{raiting}}</strong><br>
         <form method="post">
             <input type="text" name="userName", value="{{user.email}}" readonly="readonly"/>
 

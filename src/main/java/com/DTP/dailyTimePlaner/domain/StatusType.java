@@ -6,13 +6,10 @@
 //
 
 
-package com.DTP.dailyTimePlaner.XML.org.itroi.task;
+package com.DTP.dailyTimePlaner.domain;
 
-
-import com.DTP.dailyTimePlaner.XML.org.itroi.entity.Entity;
 
 import javax.persistence.Column;
-import java.util.Optional;
 
 @javax.persistence.Entity(name = "state_task")
 public class StatusType

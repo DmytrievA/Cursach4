@@ -1,13 +1,12 @@
-package com.DTP.dailyTimePlaner.XML.org.itroi.task;
-
-import com.DTP.dailyTimePlaner.XML.org.itroi.user.UserType;
+package com.DTP.dailyTimePlaner.domain;
 
 import javax.persistence.*;
+import javax.persistence.Entity;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-@Entity(name = "giveTask")
+@Entity(name = "give_task")
 public class GivenTasks extends TaskPrefab {
 
     @Column(name="finishDate", columnDefinition = "DATETIME")
@@ -17,7 +16,7 @@ public class GivenTasks extends TaskPrefab {
     @JoinColumn(name="mentorEmail",
             referencedColumnName = "email",
             nullable = false)
-    protected com.DTP.dailyTimePlaner.XML.org.itroi.user.UserType mentor;
+    protected UserType mentor;
 
     @Transient
     @Column(name = "result_file", columnDefinition = "TEXT")
@@ -34,8 +33,12 @@ public class GivenTasks extends TaskPrefab {
     protected String taskDoc;
 
     @ManyToOne
-    @JoinColumn(name = "level", referencedColumnName = "id",nullable = false)
+    @JoinColumn(name = "level", referencedColumnName = "id", nullable = false)
     protected RateLevel level;
+
+    @ManyToOne
+    @JoinColumn(name = "group", referencedColumnName = "id" , nullable = false)
+    protected GroupType group;
 
     public GivenTasks() {
     }
@@ -98,5 +101,13 @@ public class GivenTasks extends TaskPrefab {
 
     public void setLevel(RateLevel level) {
         this.level = level;
+    }
+
+    public GroupType getGroup() {
+        return group;
+    }
+
+    public void setGroup(GroupType group) {
+        this.group = group;
     }
 }

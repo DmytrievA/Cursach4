@@ -1,6 +1,6 @@
 package com.DTP.dailyTimePlaner.repos;
 
-import com.DTP.dailyTimePlaner.XML.org.itroi.user.RoleType;
+import com.DTP.dailyTimePlaner.domain.RoleType;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

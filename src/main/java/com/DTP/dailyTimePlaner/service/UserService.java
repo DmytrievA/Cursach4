@@ -1,6 +1,6 @@
 package com.DTP.dailyTimePlaner.service;
 
-import com.DTP.dailyTimePlaner.XML.org.itroi.user.UserType;
+import com.DTP.dailyTimePlaner.domain.UserType;
 import com.DTP.dailyTimePlaner.repos.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

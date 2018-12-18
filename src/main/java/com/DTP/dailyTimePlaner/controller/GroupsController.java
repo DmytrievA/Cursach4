@@ -1,10 +1,9 @@
 package com.DTP.dailyTimePlaner.controller;
 
-import com.DTP.dailyTimePlaner.XML.org.itroi.group.GroupType;
-import com.DTP.dailyTimePlaner.XML.org.itroi.group.GroupUserType;
-import com.DTP.dailyTimePlaner.repos.GroupTypeRepo;
-import com.DTP.dailyTimePlaner.repos.GroupUserTypeRepo;
-import com.DTP.dailyTimePlaner.repos.UserRepo;
+import com.DTP.dailyTimePlaner.domain.GroupType;
+import com.DTP.dailyTimePlaner.domain.GroupUserType;
+import com.DTP.dailyTimePlaner.domain.UserType;
+import com.DTP.dailyTimePlaner.repos.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,12 +21,14 @@ public class GroupsController {
 
     @Autowired
     private GroupTypeRepo groupTypeRepo;
-
     @Autowired
     private GroupUserTypeRepo groupUserTypeRepo;
-
     @Autowired
     private UserRepo userRepo;
+    @Autowired
+    private GivenTasksRepo givenTasksRepo;
+    @Autowired
+    private StatusTypeRepo statusTypeRepo;
 
     @GetMapping("/groups")
     public String allGroups(Map<String,Object> model,
@@ -76,6 +77,10 @@ public class GroupsController {
         boolean admin = "admin".equals(userRole);
         model.put("admin",admin);
         List<GroupUserType> users = groupUserTypeRepo.findByGroup_Id(group.getId());
+        for (GroupUserType user:
+                users) {
+            user.getRaiting((UserType)session.getAttribute("currentUser"),givenTasksRepo,statusTypeRepo);
+        }
         model.put("users",users);
         return "selectedGroup";
     }

@@ -1,8 +1,7 @@
 package com.DTP.dailyTimePlaner.repos;
 
-import com.DTP.dailyTimePlaner.XML.org.itroi.group.GroupType;
+import com.DTP.dailyTimePlaner.domain.GroupType;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 

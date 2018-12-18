@@ -1,7 +1,4 @@
-package com.DTP.dailyTimePlaner.XML.org.itroi.task;
-
-import com.DTP.dailyTimePlaner.XML.org.itroi.entity.Entity;
-import com.DTP.dailyTimePlaner.XML.org.itroi.user.UserType;
+package com.DTP.dailyTimePlaner.domain;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -35,10 +32,7 @@ public abstract class TaskPrefab extends Entity
     @JoinColumn(name="userEmail",
             referencedColumnName = "email",
             nullable = false)
-    protected com.DTP.dailyTimePlaner.XML.org.itroi.user.UserType user;
-
-    @Transient
-    protected RemindersType reminders;
+    protected UserType user;
 
     public String getTitle() {
     return title;
@@ -80,11 +74,4 @@ public abstract class TaskPrefab extends Entity
         this.user = user;
     }
 
-    public RemindersType getReminders() {
-        return reminders;
-    }
-
-    public void setReminders(RemindersType reminders) {
-        this.reminders = reminders;
-    }
 }

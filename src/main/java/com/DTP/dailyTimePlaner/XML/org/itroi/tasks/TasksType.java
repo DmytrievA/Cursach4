@@ -14,7 +14,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
-import com.DTP.dailyTimePlaner.XML.org.itroi.task.TaskType;
+import com.DTP.dailyTimePlaner.domain.TaskType;
 
 
 /**

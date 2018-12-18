@@ -14,7 +14,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
-import com.DTP.dailyTimePlaner.XML.org.itroi.entity.Entity;
+import com.DTP.dailyTimePlaner.domain.Entity;
 
 
 /**

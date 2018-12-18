@@ -11,7 +11,7 @@ package com.DTP.dailyTimePlaner.XML.org.itroi.task;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
-import com.DTP.dailyTimePlaner.XML.org.itroi.entity.Entity;
+import com.DTP.dailyTimePlaner.domain.Entity;
 
 
 /**
@@ -42,17 +42,17 @@ public class UserType
     extends Entity
 {
 
-    protected com.DTP.dailyTimePlaner.XML.org.itroi.user.UserType userValue;
+    protected com.DTP.dailyTimePlaner.domain.UserType userValue;
 
     /**
      * Gets the value of the userValue property.
      * 
      * @return
      *     possible object is
-     *     {@link com.DTP.dailyTimePlaner.XML.org.itroi.user.UserType }
+     *     {@link com.DTP.dailyTimePlaner.domain.UserType }
      *     
      */
-    public com.DTP.dailyTimePlaner.XML.org.itroi.user.UserType getUserValue() {
+    public com.DTP.dailyTimePlaner.domain.UserType getUserValue() {
         return userValue;
     }
 
@@ -61,10 +61,10 @@ public class UserType
      * 
      * @param value
      *     allowed object is
-     *     {@link com.DTP.dailyTimePlaner.XML.org.itroi.user.UserType }
+     *     {@link com.DTP.dailyTimePlaner.domain.UserType }
      *     
      */
-    public void setUserValue(com.DTP.dailyTimePlaner.XML.org.itroi.user.UserType value) {
+    public void setUserValue(com.DTP.dailyTimePlaner.domain.UserType value) {
         this.userValue = value;
     }
 

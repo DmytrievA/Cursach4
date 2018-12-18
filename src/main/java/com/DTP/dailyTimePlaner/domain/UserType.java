@@ -6,17 +6,17 @@
 //
 
 
-package com.DTP.dailyTimePlaner.XML.org.itroi.user;
+package com.DTP.dailyTimePlaner.domain;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlElement;
 
+import com.DTP.dailyTimePlaner.domain.RoleType;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 import java.util.Collections;
-import java.util.Set;
 
 
 /**
@@ -48,7 +48,7 @@ import java.util.Set;
 
 @javax.persistence.Entity(name = "user_test")
 public class UserType
-    //extends com.DTP.dailyTimePlaner.XML.org.itroi.entity.Entity
+    //extends com.DTP.dailyTimePlaner.domain.Entity
     implements UserDetails {
 
     @Id

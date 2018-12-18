@@ -1,6 +1,6 @@
 package com.DTP.dailyTimePlaner.repos;
 
-import com.DTP.dailyTimePlaner.XML.org.itroi.task.TaskType;
+import com.DTP.dailyTimePlaner.domain.TaskType;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

@@ -37,7 +37,7 @@ public class GivenTasks extends TaskPrefab {
     protected RateLevel level;
 
     @ManyToOne
-    @JoinColumn(name = "group", referencedColumnName = "id" , nullable = false)
+    @JoinColumn(name = "from_group", referencedColumnName = "id" , nullable = false)
     protected GroupType group;
 
     public GivenTasks() {

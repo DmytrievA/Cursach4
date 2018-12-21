@@ -18,42 +18,13 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 import java.util.Collections;
 
-
-/**
- * <p>Java class for userType complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * 
- * <pre>
- * &lt;complexType name="userType">
- *   &lt;complexContent>
- *     &lt;extension base="{http://www.itroi.org/entity}Entity">
- *       &lt;sequence>
- *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="surname" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="email" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="login" type="{http://www.itroi.org/user}login"/>
- *         &lt;element name="password" type="{http://www.itroi.org/user}password"/>
- *         &lt;element name="gender" type="{http://www.itroi.org/user}gender" minOccurs="0"/>
- *         &lt;element name="memberOfGroups" type="{http://www.itroi.org/user}memberOfGroups"/>
- *       &lt;/sequence>
- *       &lt;attribute name="role" type="{http://www.itroi.org/user}roleType" />
- *     &lt;/extension>
- *   &lt;/complexContent>
- * &lt;/complexType>
- * </pre>
- * 
- * 
-*/
-
 @javax.persistence.Entity(name = "user_test")
 public class UserType
-    //extends com.DTP.dailyTimePlaner.domain.Entity
-    implements UserDetails {
+    implements UserDetails
+{
 
     @Id
     @Column(name = "email", columnDefinition = "varchar(100)", nullable = false,unique = true)
-    @XmlElement(required = true)
     protected String email;
 
     @Column(name = "password", columnDefinition = "varchar(100)", nullable = false)
@@ -69,7 +40,7 @@ public class UserType
     @XmlElement(required = true)
     protected String name;
 
-    @Column(name = "login", columnDefinition = "varchar(100)", nullable = false)
+    @Column(name = "login", columnDefinition = "varchar(100)")
     @XmlElement(required = true)
     protected String login;
 

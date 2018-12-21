@@ -54,18 +54,17 @@ public class GiveTaskController {
                           @RequestParam String description,
                           @RequestParam String comments,
                           @RequestParam String taskRate,
-                          @RequestParam(required = false) MultipartFile taskDock,
                           HttpSession session) throws IOException, ParseException {
         GivenTasks newTask = new GivenTasks();
-        newTask.setDate((new SimpleDateFormat("YYYY-MM-dd'T'hh:mm")).parse(dateStart));
-        newTask.setFinishDate((new SimpleDateFormat("YYYY-MM-dd'T'hh:mm")).parse(dateFinish));
+        newTask.setDate((new SimpleDateFormat("yyyy-MM-dd'T'hh:mm")).parse(dateStart));
+        newTask.setFinishDate((new SimpleDateFormat("yyyy-MM-dd'T'hh:mm")).parse(dateFinish));
         newTask.setTitle(Title);
         newTask.setDescription(description);
         newTask.setMentor((UserType)session.getAttribute("currentUser"));
         newTask.setComments(comments);
         newTask.setLevel(levelRepo.findById(Integer.parseInt(taskRate)).get());
         newTask.setUser((UserType)session.getAttribute("user"));
-        newTask.setTaskStatus(statusTypeRepo.findByName("w"));
+        newTask.setTaskStatus(statusTypeRepo.findByName("Ожидает"));
         newTask.setGroup((GroupType)session.getAttribute("currentGroup"));
         givenTasksRepo.save(newTask);
         return "redirect:/selectedGroup";

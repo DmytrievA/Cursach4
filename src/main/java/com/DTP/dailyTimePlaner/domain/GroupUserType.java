@@ -57,10 +57,11 @@ public class GroupUserType extends Entity {
 
     public Double getRaiting(UserType mentor, GivenTasksRepo givenTasksRepo, StatusTypeRepo statusTypeRepo) {
         Integer done,failed;
-        done = givenTasksRepo.countByMentorAndUserAndGroupAndTaskStatus(mentor,this.user,this.group,statusTypeRepo.findByName("d"));
+        done = givenTasksRepo.countByMentorAndUserAndGroupAndTaskStatus(mentor,this.user,this.group,statusTypeRepo.findByName("Гтово"));
         List<String> statuses = new LinkedList<>();
-        statuses.add("d");
-        statuses.add("w");
+        statuses.add("Готово");
+        statuses.add("Ожидает");
+        statuses.add("В обработке");
         failed = givenTasksRepo.countByMentorAndUserAndGroupAndTaskStatusNotIn(mentor,this.user,this.group,statusTypeRepo.findByNameIn(statuses));
         if(failed == 0d)
             failed = done;

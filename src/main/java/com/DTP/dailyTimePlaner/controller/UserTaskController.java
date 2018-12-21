@@ -1,7 +1,9 @@
 package com.DTP.dailyTimePlaner.controller;
 
+import com.DTP.dailyTimePlaner.domain.GivenTasks;
 import com.DTP.dailyTimePlaner.domain.TaskType;
 import com.DTP.dailyTimePlaner.domain.UserType;
+import com.DTP.dailyTimePlaner.repos.GivenTasksRepo;
 import com.DTP.dailyTimePlaner.repos.StatusTypeRepo;
 import com.DTP.dailyTimePlaner.repos.TaskTypeRepo;
 import com.DTP.dailyTimePlaner.repos.UserRepo;
@@ -28,6 +30,8 @@ public class UserTaskController {
     private TaskTypeRepo taskTypeRepo;
     @Autowired
     private StatusTypeRepo statusTypeRepo;
+    @Autowired
+    private GivenTasksRepo givenTasksRepo;
     @GetMapping("/usertask")
     public String greeting(Map<String, Object> model,
                            final Principal principal,
@@ -45,6 +49,9 @@ public class UserTaskController {
         List<TaskType> tasks = taskTypeRepo
                 .findByUserEmailOrderByDateDesc(userName);
         model.put("tasks", tasks);
+
+        List<GivenTasks> groupTasks = givenTasksRepo.findByUserOrderByDateDesc(currentUser);
+        model.put("groupTasks", groupTasks);
         return "usertask";
     }
 
@@ -60,7 +67,7 @@ public class UserTaskController {
             Map<String,Object> model) throws DatatypeConfigurationException {
         UserType user = (UserType) session.getAttribute("currentUser");
 
-        SimpleDateFormat dateFormat = new SimpleDateFormat("YYYY-MM-dd");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         java.util.Date time;
         TaskType task = new TaskType();
         try {

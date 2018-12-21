@@ -4,6 +4,7 @@ import com.DTP.dailyTimePlaner.domain.GroupType;
 import com.DTP.dailyTimePlaner.domain.GroupUserType;
 import com.DTP.dailyTimePlaner.domain.UserType;
 import com.DTP.dailyTimePlaner.repos.*;
+import javafx.util.Pair;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import javax.servlet.http.HttpSession;
 import javax.transaction.Transactional;
 import java.security.Principal;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -23,8 +25,6 @@ public class GroupsController {
     private GroupTypeRepo groupTypeRepo;
     @Autowired
     private GroupUserTypeRepo groupUserTypeRepo;
-    @Autowired
-    private UserRepo userRepo;
     @Autowired
     private GivenTasksRepo givenTasksRepo;
     @Autowired
@@ -68,7 +68,8 @@ public class GroupsController {
             group.setId(Integer.parseInt(groupId));
             session.setAttribute("currentGroup",group);
         }
-
+        List<Object[]> info = givenTasksRepo.selectValuesForPieChart(Integer.parseInt(groupId));
+        model.put("data",castToPair(info));
         if(principal ==null)
             return "redirect:/logout";
 
@@ -102,9 +103,22 @@ public class GroupsController {
     {
         if(principal.getName().isEmpty())
             return "redirect:/logout";
-
         String userName = principal.getName();
         groupUserTypeRepo.deleteByUserEmailAndGroupId(userName,Integer.parseInt(groupId));
         return "redirect:/groups";
+    }
+
+    private List<Pair<Double, String>> castToPair(List<Object[]> obj) {
+        LinkedList<Pair<Double, String>> res = new LinkedList<>();
+        Double max = 1d;
+        for (int i=0;i<obj.size();i++){
+            res.add(new Pair<Double, String>(Double.parseDouble(obj.get(i)[0].toString()),obj.get(i)[1].toString()));
+            if(res.get(i).getKey()>max)
+                max = res.get(i).getKey();
+        }
+        for (int i=0;i<obj.size();i++) {
+            res.set(i, new Pair<>(res.get(i).getKey()*100d/max,res.get(i).getValue()));
+        }
+        return res;
     }
 }

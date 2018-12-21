@@ -24,6 +24,15 @@ public class StatusType
         super();
     }
 
+    public StatusType(Integer id, String name) {
+        super(id);
+        this.name = name;
+    }
+
+    public StatusType(String name) {
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }

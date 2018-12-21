@@ -55,6 +55,12 @@ public class Entity {
     @XmlAttribute(name = "id", required = true)
     protected Integer id;
 
+    public Entity() {
+    }
+
+    public Entity(Integer id){
+        this.id = id;
+    }
     /**
      * Gets the value of the id property.
      * 

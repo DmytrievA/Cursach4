@@ -35,6 +35,7 @@ public class RegistrationController {
                 model.put("message","Email is using by another user");
                 return "registration";
         }
+        user.setActive(true);
         user.setRole(roleTypeRepo.findByName("user"));
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         userRepo.save(user);

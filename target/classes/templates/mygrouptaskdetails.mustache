@@ -1,0 +1,50 @@
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<div class="nav">
+    <a href = "/">Main Page</a>
+    <a href = "/groups">My Groups</a>
+    <a href = "/newtask">New Tasks</a>
+</div>
+<form action="/logout" method="post">
+    <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+    <input type="submit" value="Sign Out"/>
+</form>
+<body>
+{{#task}}
+    {{title}}<br/>
+    {{mentor.email}}<br/>
+    {{group.name}}<br/>
+    {{description}}<br/>
+    {{date}}<br/>
+    {{finishDate}}<br/>
+    {{#comments}}
+        {{comments}}<br/>
+    {{/comments}}
+    <form method="post" action="/grouptaskdetails">
+        {{#mes}}
+            <p style="color: red;"><h4>Поле "ответ" должно быть заполнено!</h4></p>
+        {{/mes}}
+        <label for="res"> Ответ*: </label>
+        <input id="res" type="text" name="result" placeholder="paste link for result"/><br/>
+        <input type="submit" name = "submitAction" value="Done"/><br/>
+        <button id="2" type="button" onclick="showElem()" value="Refuse">Refuse</button>
+        <div style="display: none" id="hi">
+            <input type="text" name="comments" placeholder="Why refuse?=("/><br/>
+            <input type="submit" name = "submitAction" value="Refuse"/>
+        </div>
+        <input type="hidden" name="task" value="{{id}}"/>
+        <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+        <input type="submit" name = "submitAction" value="Accept"/>
+    </form>
+{{/task}}
+</body>
+
+<script>
+    function showElem() {
+        document.getElementById("hi").style.display = "block";
+        document.getElementById("2").style.display = "none";
+    }
+</script>
+</html>

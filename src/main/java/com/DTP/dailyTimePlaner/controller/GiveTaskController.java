@@ -67,7 +67,7 @@ public class GiveTaskController {
         newTask.setTaskStatus(statusTypeRepo.findByName("Ожидает"));
         newTask.setGroup((GroupType)session.getAttribute("currentGroup"));
         givenTasksRepo.save(newTask);
-        return "redirect:/selectedGroup";
+        return "redirect:/selectedGroup?groupId="+newTask.getGroup().getId();
     }
 
     private String getFileName(String sourseName)

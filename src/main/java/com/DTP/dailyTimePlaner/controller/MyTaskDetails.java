@@ -38,6 +38,6 @@ public class MyTaskDetails {
         curTask.setDescription(description);
         curTask.setTaskStatus(statusTypeRepo.findById(Integer.parseInt(newStatus)).get());
         taskTypeRepo.save(curTask);
-        return "redurect:/usertask";
+        return "redirect:/usertask";
     }
 }

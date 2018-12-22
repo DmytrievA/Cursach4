@@ -29,8 +29,8 @@ public class ChangeGroupMemberController {
                                  Map<String,Object> model)
     {
         model.put("user",userName);
-        model.put("roles", groupRoleTypeRepo.findAll());
-        return "/changegroupmember";
+        model.put("allRoles", groupRoleTypeRepo.findAll());
+        return "changegroupmember";
     }
 
     @PostMapping("/changegroupmember")

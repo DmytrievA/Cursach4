@@ -27,8 +27,11 @@ public interface GivenTasksRepo extends JpaRepository<GivenTasks,Integer> {
 
     List<GivenTasks> findByMentorAndTaskStatus(UserType mentor,StatusType status);
 
-    @Query(value = "SELECT COUNT(gt.id) AS 'count',gt.`name` FROM (SELECT st.`name`,gt.id, gt.from_group FROM state_task st LEFT JOIN give_task gt ON st.id = gt.id_state_task) gt LEFT JOIN \n" +
-            "(SELECT gu.`group` FROM group_user_test gu WHERE gu.`group`=?1) gu ON gu.`group` = gt.from_group GROUP BY gt.`name`",
+    @Query(value = "SELECT COUNT(gt.id),st.`name` FROM state_task st LEFT JOIN (SELECT gt.id, gt.id_state_task FROM give_task gt WHERE gt.from_group = 5) gt ON st.id = gt.id_state_task GROUP BY st.id",
             nativeQuery = true)
     List<Object[]> selectValuesForPieChart(Integer groupId);
+
+    List<GivenTasks> findByGroupIdAndTaskStatusName(Integer groupId,String status);
+
+    List<GivenTasks> findByGroupIdAndUserEmailAndTaskStatusName(Integer groupId,String email, String status);
 }

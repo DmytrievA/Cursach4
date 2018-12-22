@@ -22,14 +22,6 @@ public class GroupTaskDetailsController {
     @Autowired
     private StatusTypeRepo statusTypeRepo;
 
-    @GetMapping("/grouptaskdetails")
-    public String showPage(@RequestParam String task,
-                           Map<String, Object> model)
-    {
-        GivenTasks curTask = givenTasksRepo.findById(Integer.parseInt(task)).get();
-        model.put("task",curTask);
-        return "grouptaskdetails";
-    }
 
     @GetMapping("/mygrouptaskdetails")
     public String showMyPage(@RequestParam String task,
@@ -40,6 +32,15 @@ public class GroupTaskDetailsController {
         model.put("mes",message);
         model.put("task",curTask);
         return "mygrouptaskdetails";
+    }
+
+    @GetMapping("/grouptaskdetails")
+    public String showPage(@RequestParam String task,
+                           Map<String, Object> model)
+    {
+        GivenTasks curTask = givenTasksRepo.findById(Integer.parseInt(task)).get();
+        model.put("task",curTask);
+        return "grouptaskdetails";
     }
 
     @PostMapping("/grouptaskdetails")

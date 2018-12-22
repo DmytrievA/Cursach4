@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import javax.servlet.http.HttpSession;
 import javax.transaction.Transactional;
 import java.security.Principal;
+import java.text.DecimalFormat;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -61,22 +62,26 @@ public class GroupsController {
                                 HttpSession session,
                                 Map<String,Object> model)
     {
+
         GroupType group = (GroupType)session.getAttribute("currentGroup");
-        if(group ==null) {
+        if(group ==null || (groupId!=null && group.getId() != Integer.parseInt(groupId))) {
             group = new GroupType();
             group.setName(groupName);
             group.setId(Integer.parseInt(groupId));
             session.setAttribute("currentGroup",group);
         }
-        List<Object[]> info = givenTasksRepo.selectValuesForPieChart(Integer.parseInt(groupId));
-        model.put("data",castToPair(info));
+        model.put("currentGroupName",group.getName());
         if(principal ==null)
             return "redirect:/logout";
-
+        List<Object[]> info = givenTasksRepo.selectValuesForPieChart(Integer.parseInt(groupId));
+        model.put("data", showStatistik(info,model));
         String userName = principal.getName();
         String userRole = groupUserTypeRepo.findUserGroupRole(group.getId(),userName);
-        boolean admin = "admin".equals(userRole);
-        model.put("admin",admin);
+        model.put("userRole",userRole);
+        if("admin".equals(userRole))
+            showAdminData(model,group.getId());
+        else
+            showUserData(model,group.getId(),userName);
         List<GroupUserType> users = groupUserTypeRepo.findByGroup_Id(group.getId());
         for (GroupUserType user:
                 users) {
@@ -108,17 +113,37 @@ public class GroupsController {
         return "redirect:/groups";
     }
 
-    private List<Pair<Double, String>> castToPair(List<Object[]> obj) {
+    private List<Pair<Double, String>> showStatistik(List<Object[]> obj, Map<String,Object> model) {
         LinkedList<Pair<Double, String>> res = new LinkedList<>();
-        Double max = 1d;
+        Double sum = 1d;
         for (int i=0;i<obj.size();i++){
-            res.add(new Pair<Double, String>(Double.parseDouble(obj.get(i)[0].toString()),obj.get(i)[1].toString()));
-            if(res.get(i).getKey()>max)
-                max = res.get(i).getKey();
+            res.add(new Pair<>(Double.parseDouble(obj.get(i)[0].toString()),obj.get(i)[1].toString()));
+            model.put("percents",obj);
+            sum+=res.get(i).getKey();
         }
+        DecimalFormat decimalFormat = new DecimalFormat(".");
         for (int i=0;i<obj.size();i++) {
-            res.set(i, new Pair<>(res.get(i).getKey()*100d/max,res.get(i).getValue()));
+            res.set(i, new Pair<>(Double.parseDouble(decimalFormat.format(res.get(i).getKey()*100d/sum))
+                    ,res.get(i).getValue()));
         }
         return res;
+    }
+
+    private void showAdminData(Map<String,Object> model, Integer groupId)
+    {
+        model.put("waiting",givenTasksRepo.findByGroupIdAndTaskStatusName(groupId,"Ожидает"));
+        model.put("processing",givenTasksRepo.findByGroupIdAndTaskStatusName(groupId,"В обработке"));
+        model.put("done",givenTasksRepo.findByGroupIdAndTaskStatusName(groupId,"Готов"));
+        model.put("refused",givenTasksRepo.findByGroupIdAndTaskStatusName(groupId,"Отклонен"));
+        model.put("failed",givenTasksRepo.findByGroupIdAndTaskStatusName(groupId,"Провален"));
+    }
+
+    private void showUserData(Map<String,Object> model, Integer groupId,String email)
+    {
+        model.put("waiting",givenTasksRepo.findByGroupIdAndUserEmailAndTaskStatusName(groupId,"Ожидает",email));
+        model.put("processing",givenTasksRepo.findByGroupIdAndUserEmailAndTaskStatusName(groupId,"В обработке",email));
+        model.put("done",givenTasksRepo.findByGroupIdAndUserEmailAndTaskStatusName(groupId,"Готов",email));
+        model.put("refused",givenTasksRepo.findByGroupIdAndUserEmailAndTaskStatusName(groupId,"Отклонен",email));
+        model.put("failed",givenTasksRepo.findByGroupIdAndUserEmailAndTaskStatusName(groupId,"Провален",email));
     }
 }

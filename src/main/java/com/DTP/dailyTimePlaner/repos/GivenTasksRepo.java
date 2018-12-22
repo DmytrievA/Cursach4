@@ -21,13 +21,15 @@ public interface GivenTasksRepo extends JpaRepository<GivenTasks,Integer> {
 
     List<GivenTasks> findByUserOrderByDateDesc(UserType user);
 
+    List<GivenTasks> findByUserAndTaskStatusNameOrderByDateDesc(UserType user,String statusName );
+
     Optional<GivenTasks> findById(Integer id);
 
     List<GivenTasks> findByMentor(UserType mentor);
 
     List<GivenTasks> findByMentorAndTaskStatus(UserType mentor,StatusType status);
 
-    @Query(value = "SELECT COUNT(gt.id),st.`name` FROM state_task st LEFT JOIN (SELECT gt.id, gt.id_state_task FROM give_task gt WHERE gt.from_group = 5) gt ON st.id = gt.id_state_task GROUP BY st.id",
+    @Query(value = "SELECT COUNT(gt.id),st.`name` FROM state_task st LEFT JOIN (SELECT gt.id, gt.id_state_task FROM give_task gt WHERE gt.from_group = ?1) gt ON st.id = gt.id_state_task GROUP BY st.id",
             nativeQuery = true)
     List<Object[]> selectValuesForPieChart(Integer groupId);
 

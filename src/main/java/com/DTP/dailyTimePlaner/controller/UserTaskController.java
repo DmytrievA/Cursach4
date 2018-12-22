@@ -17,7 +17,6 @@ import javax.servlet.http.HttpSession;
 import javax.xml.datatype.DatatypeConfigurationException;
 import java.security.Principal;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.Map;
 
@@ -64,27 +63,12 @@ public class UserTaskController {
             @RequestParam String timeStart,
             @RequestParam String taskState,
             HttpSession session,
-            Map<String,Object> model) throws DatatypeConfigurationException {
+            Map<String,Object> model) throws ParseException {
         UserType user = (UserType) session.getAttribute("currentUser");
 
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        java.util.Date time;
+
         TaskType task = new TaskType();
-        try {
-            time = dateFormat.parse(date);
-            task.setDate(time);
-            dateFormat = new SimpleDateFormat("hh:mm");
-            time = dateFormat.parse(timeStart);
-            task.setTime(time);
-            time = dateFormat.parse(timeFinish);
-            task.setDuration(time);
-        } catch (ParseException e) {
-            date = "oops";
-            model.put("message", date);
-            model.put("time",timeStart);
-            return "greeting";
-        }
-        model.put("message", date);
+        task.setDateTimeDuration(date,timeStart,timeFinish);
 
         task.setTitle(name);
         task.setDescription(description);

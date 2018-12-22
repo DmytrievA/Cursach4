@@ -17,10 +17,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpSession;
+import java.io.File;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Map;
+import java.util.UUID;
 
 @Controller
 public class GiveTaskController {
@@ -38,9 +40,11 @@ public class GiveTaskController {
 
     @GetMapping("/givetask")
     public String showPage(@RequestParam String userName,
+                           @RequestParam(required = false) String mes,
                            HttpSession session,
                            Map<String,Object> model)
     {
+        model.put("mes",mes);
         session.setAttribute("user",userRepo.findByEmail(userName));
         model.put("states", levelRepo.findAll());
         model.put("user",userName);
@@ -50,15 +54,19 @@ public class GiveTaskController {
     @PostMapping("/givetask")
     public String addTask(@RequestParam String dateStart,
                           @RequestParam String dateFinish,
-                          @RequestParam String Title,
-                          @RequestParam String description,
                           @RequestParam String comments,
                           @RequestParam String taskRate,
+                          @RequestParam String title,
+                          @RequestParam String description,
+                          @RequestParam MultipartFile taskDock,
                           HttpSession session) throws IOException, ParseException {
         GivenTasks newTask = new GivenTasks();
+        ChangeGroupTask.addFileToGroupTask(taskDock, newTask, path);
         newTask.setDate((new SimpleDateFormat("yyyy-MM-dd'T'hh:mm")).parse(dateStart));
         newTask.setFinishDate((new SimpleDateFormat("yyyy-MM-dd'T'hh:mm")).parse(dateFinish));
-        newTask.setTitle(Title);
+        if(newTask.getFinishDate().before(newTask.getDate())|| dateStart.equals(dateFinish))
+            return "redirect:/givetask?mes=true";
+        newTask.setTitle(title);
         newTask.setDescription(description);
         newTask.setMentor((UserType)session.getAttribute("currentUser"));
         newTask.setComments(comments);
@@ -70,7 +78,7 @@ public class GiveTaskController {
         return "redirect:/selectedGroup?groupId="+newTask.getGroup().getId();
     }
 
-    private String getFileName(String sourseName)
+    public static String getFileName(String sourseName)
     {
         int point = sourseName.lastIndexOf('\\');
         return sourseName.substring(point+1);

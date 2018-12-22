@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -24,21 +25,21 @@ public class GroupTaskDetailsController {
 
 
     @GetMapping("/mygrouptaskdetails")
-    public String showMyPage(@RequestParam String task,
+    public String showMyPage(@RequestParam String taskId,
                            @RequestParam(required = false) String message,
                            Map<String,Object> model)
     {
-        GivenTasks curTask = givenTasksRepo.findById(Integer.parseInt(task)).get();
+        GivenTasks curTask = givenTasksRepo.findById(Integer.parseInt(taskId)).get();
         model.put("mes",message);
         model.put("task",curTask);
         return "mygrouptaskdetails";
     }
 
     @GetMapping("/grouptaskdetails")
-    public String showPage(@RequestParam String task,
+    public String showPage(@RequestParam String taskId,
                            Map<String, Object> model)
     {
-        GivenTasks curTask = givenTasksRepo.findById(Integer.parseInt(task)).get();
+        GivenTasks curTask = givenTasksRepo.findById(Integer.parseInt(taskId)).get();
         model.put("task",curTask);
         return "grouptaskdetails";
     }
@@ -47,18 +48,19 @@ public class GroupTaskDetailsController {
     public String changeTask(@RequestParam String task,
                              @RequestParam String submitAction,
                              @RequestParam(required = false) String result,
-                             @RequestParam(required = false) String comments)
+                             @RequestParam(required = false) String comments,
+                             @RequestParam(required = false) MultipartFile file)
     {
         GivenTasks curTask = givenTasksRepo.findById(Integer.parseInt(task)).get();
         switch (submitAction)
         {
             case "Done":
-                if(result.isEmpty() || result == null)
+                if((result.isEmpty() || result == null) && (file==null || file.isEmpty()))
                     return "redirect:/mygrouptaskdetails?task="+task+"&message=true";
                 curTask.setTaskStatus(statusTypeRepo.findByName("Готов"));
                 curTask.setResult(result);
                 givenTasksRepo.save(curTask);
-                return "redirect:/usertask";
+                return "redirect:/selectedGroup";
             case "Accept":
                 curTask.setTaskStatus(statusTypeRepo.findByName("В обработке"));
                 givenTasksRepo.save(curTask);

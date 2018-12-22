@@ -2,6 +2,7 @@
 <#import "parts/common.ftl" as com>
 
 <@com.page>
+    <a href="/newgroup">Create new group</a><br/>
 <#list groups as group>
     <form method="get" action="/selectedGroup">
     ${group.name}

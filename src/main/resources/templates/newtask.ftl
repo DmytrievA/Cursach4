@@ -9,7 +9,7 @@
             ${task.level.name}<br/>
             ${task.date}<br/>
             ${task.finishDate}<br/>
-                <input type="hidden" name="task" value="${task.id}"/>
+                <input type="hidden" name="taskId" value="${task.id}"/>
                 <input type="hidden" name="_csrf" value="${_csrf.token}"/>
                 <input type="submit" value="Details" name="btnName"/>
             </form>

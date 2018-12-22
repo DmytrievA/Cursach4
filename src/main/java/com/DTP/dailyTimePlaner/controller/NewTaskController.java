@@ -22,7 +22,7 @@ public class NewTaskController {
                            Map<String,Object> model)
     {
         UserType currentUser = (UserType)session.getAttribute("currentUser");
-        List<GivenTasks> tasks = givenTasksRepo.findByUserOrderByDateDesc(currentUser);
+        List<GivenTasks> tasks = givenTasksRepo.findByUserAndTaskStatusNameOrderByDateDesc(currentUser,"Ожидает");
         model.put("tasks",tasks);
         return "newtask";
     }

@@ -1,6 +1,7 @@
 package com.DTP.dailyTimePlaner.repos;
 
 import com.DTP.dailyTimePlaner.domain.GroupUserType;
+import com.DTP.dailyTimePlaner.domain.UserType;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

@@ -11,6 +11,8 @@ package com.DTP.dailyTimePlaner.domain;
 import com.DTP.dailyTimePlaner.domain.TaskPrefab;
 
 import javax.persistence.Column;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @javax.persistence.Entity(name = "taskXMLTest")
@@ -39,5 +41,17 @@ public class TaskType extends TaskPrefab
 
     public void setTime(Date time) {
         this.time = time;
+    }
+
+    public void setDateTimeDuration(String taskDete, String timeStart, String timeFinish) throws ParseException {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        java.util.Date time;
+        time = dateFormat.parse(taskDete);
+        this.setDate(time);
+        dateFormat = new SimpleDateFormat("hh:mm");
+        time = dateFormat.parse(timeStart);
+        this.setTime(time);
+        time = dateFormat.parse(timeFinish);
+        this.setDuration(time);
     }
 }

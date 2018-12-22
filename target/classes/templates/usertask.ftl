@@ -1,29 +1,53 @@
 <#import "parts/common.ftl" as com>
 
+
 <@com.page>
-<div>
-    <form method="post">
-        <input type="date" name="date"/><br>
-        <input type="time" name="timeStart"/><br>
-        <input type="time" name="timeFinish"/><br>
-        <input type="text" name="name" placeholder="Введите название"/><br>
-        <input type="text" name="description" placeholder="Введите описание"/><br>
-        <select name="taskState">
-            <#list states as state>
-            <option value="${state.id}">${state.name}</option>
-            </#list>
-        </select>
-        <input type="hidden" name="_csrf" value="${_csrf.token}"/>
-        <button type="submit">Добавить</button>
+<div xmlns="http://www.w3.org/1999/html">
+    <form method="post"class="form-horizontal" role="form">
+        <div class="form-group">
+            <label>Дата задания</label>
+        <div class="col-sm-5">
+            <input type="date" name="date"/</div></div>
+        <div class="form-group">
+            <label>Время начала</label>
+        <div class="col-sm-5">
+                <input type="time" name="timeStart"/></div></div>
+        <div class="form-group">
+            <label>Время конца</label>
+        <div class="col-sm-5">
+                <input type="time" name="timeFinish"/></div></div>
+        <div class="form-group">
+            <label>Название</label>
+        <div class="col-sm-5">
+                <input type="text" name="name" placeholder="Введите название"/></div></div>
+        <div class="form-group">
+            <label >Описание</label>
+        <div class="col-sm-5">
+                <input type="text" name="description" placeholder="Введите описание"/></div></div>
+        <div class="form-group">
+            <label >Текущее состояние</label>
+        <div class="col-sm-8">
+                <select name="taskState" class="form-control" multiple>
+                    <#list states as state>
+                    <option value="${state.id}">${state.name}</option>
+                    </#list>
+                </select></div></div>
+            <input type="hidden" name="_csrf" value="${_csrf.token}"/>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary">Добавить</button>
+            </div></div>
     </form>
 </div>
-
-<div>
-    <div>Список заданий</div>
-    <table style="width: 50%; alignment: left; border: 1px solid black; border-collapse: collapse; float: left">
+    <div class="row">
+    <div class="table-responsive col-lg-6 col-md-6 col-sm-6 col-xs-6">
+    <table class="table table-striped ">
+    <thead>
         <tr>
             <th colspan="2">Личные задания</th>
         </tr>
+    </thead>
+    <tbody>
         <#list tasks as task>
             <tr>
                 <td>Task Title</td>
@@ -56,11 +80,17 @@
                 </form>
             </td></tr>
         </#list>
+    </tbody>
     </table>
-    <table style="width: 50%; alignment: left; border: 1px solid black; border-collapse: collapse">
+    </div>
+    <div class="table-responsive col-lg-6 col-md-6 col-sm-6 col-xs-6">
+    <table class="table table-striped">
+    <thead>
         <tr>
             <th colspan="2">Групповые задания</th>
         </tr>
+    </thead>
+    <tbody>
         <#list groupTasks as task>
             <tr>
                 <td>Task Title</td>
@@ -103,6 +133,8 @@
                 <td colspan="2">У вас нет групповых заданий</td>
             </tr>
         </#list>
+    </tbody>
     </table>
+    </div>
 </div>
 </@com.page>

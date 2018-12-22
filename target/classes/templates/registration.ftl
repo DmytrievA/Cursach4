@@ -17,7 +17,7 @@ Hello new User!
         <div><label> Surname: <input type="text" name="surname"/> </label></div>
         <div>
             <label>Gender:
-                <select name="gender">
+                <select name="gender" class="form-control">
                     <option value="male">male</option>
                     <option value="female">female</option>
                 </select>

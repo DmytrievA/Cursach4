@@ -28,7 +28,6 @@ public class GivenTasks extends TaskPrefab {
     @Column(name = "comments", columnDefinition = "TEXT")
     protected String comments;
 
-    @Transient
     @Column(name = "task_doc",columnDefinition = "TEXT")
     protected String taskDoc;
 

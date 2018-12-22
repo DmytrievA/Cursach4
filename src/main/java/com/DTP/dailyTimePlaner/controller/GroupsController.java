@@ -73,10 +73,11 @@ public class GroupsController {
         model.put("currentGroupName",group.getName());
         if(principal ==null)
             return "redirect:/logout";
-        List<Object[]> info = givenTasksRepo.selectValuesForPieChart(Integer.parseInt(groupId));
+        List<Object[]> info = givenTasksRepo.selectValuesForPieChart(group.getId());
         model.put("data", showStatistik(info,model));
         String userName = principal.getName();
         String userRole = groupUserTypeRepo.findUserGroupRole(group.getId(),userName);
+        model.put("userName",userName);
         model.put("userRole",userRole);
         if("admin".equals(userRole))
             showAdminData(model,group.getId());
@@ -115,7 +116,7 @@ public class GroupsController {
 
     private List<Pair<Double, String>> showStatistik(List<Object[]> obj, Map<String,Object> model) {
         LinkedList<Pair<Double, String>> res = new LinkedList<>();
-        Double sum = 1d;
+        Double sum = 0d;
         for (int i=0;i<obj.size();i++){
             res.add(new Pair<>(Double.parseDouble(obj.get(i)[0].toString()),obj.get(i)[1].toString()));
             model.put("percents",obj);
@@ -136,6 +137,7 @@ public class GroupsController {
         model.put("done",givenTasksRepo.findByGroupIdAndTaskStatusName(groupId,"Готов"));
         model.put("refused",givenTasksRepo.findByGroupIdAndTaskStatusName(groupId,"Отклонен"));
         model.put("failed",givenTasksRepo.findByGroupIdAndTaskStatusName(groupId,"Провален"));
+        model.put("path","/changegrouptask");
     }
 
     private void showUserData(Map<String,Object> model, Integer groupId,String email)
@@ -145,5 +147,6 @@ public class GroupsController {
         model.put("done",givenTasksRepo.findByGroupIdAndUserEmailAndTaskStatusName(groupId,"Готов",email));
         model.put("refused",givenTasksRepo.findByGroupIdAndUserEmailAndTaskStatusName(groupId,"Отклонен",email));
         model.put("failed",givenTasksRepo.findByGroupIdAndUserEmailAndTaskStatusName(groupId,"Провален",email));
+        model.put("path","/mygrouptaskdetails");
     }
 }

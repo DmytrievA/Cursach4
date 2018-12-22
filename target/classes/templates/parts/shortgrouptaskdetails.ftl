@@ -5,8 +5,7 @@
     ${task.date}<br/>
     ${task.finishDate}<br/>
     <form method="get" action="${path}">
-        <input type="hidden" name="task" value="${task.id}"/>
-        <input type="hidden" name="_csrf" value="${_csrf.token}"/>
+        <input type="hidden" name="taskId" value="${task.id}"/>
         <input type="submit" value="Details"/>
     </form>
 </#macro>

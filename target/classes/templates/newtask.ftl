@@ -1,17 +1,12 @@
 <#import "parts/common.ftl" as com>
+<#import "parts/shortgrouptaskdetails.ftl" as sgtd>
 
 <@com.page>
+    <div class="row">
+    <div class="mx-auto col-lg-6 col-xl-6 col-md-6">
         <#list tasks as task>
-            <form method="get" action="/grouptaskdetails">
-            ${task.title}<br/>
-            ${task.mentor.email}<br/>
-                <input type="hidden" name="mentor" value="${task.mentor.email}" readonly="readonly"/><br/>
-            ${task.level.name}<br/>
-            ${task.date}<br/>
-            ${task.finishDate}<br/>
-                <input type="hidden" name="taskId" value="${task.id}"/>
-                <input type="hidden" name="_csrf" value="${_csrf.token}"/>
-                <input type="submit" value="Details" name="btnName"/>
-            </form>
+            <@sgtd.groupTask task "/grouptaskdetails"/>
         </#list>
+    </div>
+    </div>
 </@com.page>

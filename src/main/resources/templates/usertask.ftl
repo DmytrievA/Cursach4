@@ -2,8 +2,9 @@
 
 
 <@com.page>
-<div xmlns="http://www.w3.org/1999/html">
-    <form method="post"class="form-horizontal" role="form">
+<div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-6">
+    <form method="post" class="form-horizontal" role="form">
         <div class="form-group">
             <label>Дата задания</label>
         <div class="col-sm-5">
@@ -38,10 +39,11 @@
             <button type="submit" class="btn btn-primary">Добавить</button>
             </div></div>
     </form>
+    </div>
 </div>
     <div class="row">
-    <div class="table-responsive col-lg-6 col-md-6 col-sm-6 col-xs-6">
-    <table class="table table-striped ">
+    <div class="table-responsive col-lg-6 col-md-6 col-sm-6">
+    <table class="table table-hover table-striped">
     <thead>
         <tr>
             <th colspan="2">Личные задания</th>
@@ -83,8 +85,8 @@
     </tbody>
     </table>
     </div>
-    <div class="table-responsive col-lg-6 col-md-6 col-sm-6 col-xs-6">
-    <table class="table table-striped">
+    <div class="table-responsive col-lg-6 col-md-6 col-sm-6">
+    <table class="table table-hover table-striped ">
     <thead>
         <tr>
             <th colspan="2">Групповые задания</th>

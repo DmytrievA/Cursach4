@@ -2,7 +2,29 @@
 <#import "parts/shortgrouptaskdetails.ftl" as sgtd>
 
 <@com.page>
-<div style="width: 50%; float: right">
+    <div class="row mb-2" xmlns="http://www.w3.org/1999/html">
+    <div class="col-lg-5 col-md-5 col-sm-5">
+        <h3>${currentGroupName?if_exists}</h3><br>
+        <#if userRole == "admin">
+            <a href="/addgroupuser">Add new user</a>
+        </#if><br/>
+        <#list users as user>
+            <strong>${user.role.name}   ${user.raiting}</strong><br>
+            <form method="post" class="form-horizontal" role="form">
+            ${user.user.email}<br>
+            <input type="hidden" name="userName", value="${user.user.email}" readonly="readonly"/>
+
+            <#if userRole == "admin">
+                <input type="hidden" name="_csrf" value="${_csrf.token}"/>
+                <button class="btn btn-primary" type="submit" >Delete User</button>
+                <button class="btn btn-primary" type="submit" formaction="/changegroupmember" formmethod="get" >Change</button>
+                <button class="btn btn-primary" type="submit" formaction="/givetask" formmethod="get">Give Task</button>
+            </#if>
+            </form>
+        </#list>
+    </div>
+
+    <div class="col-lg-7 col-md-7 col-sm-7">
     <figure>
         <figcaption>Статистика заданий по группе</figcaption>
         <#list data as row>
@@ -11,128 +33,79 @@
                 <g class="bar">
                     <rect width=" ${row.getKey()}%" height="19"></rect>
                 </g>
-
         </svg><label>${row.getKey()}% ${row.getValue()}</label>
         </#list>
     </figure>
 </div>
-
-        <h3>${currentGroupName?if_exists}</h3><br>
-    <#if userRole == "admin">
-        <a href="/addgroupuser">Add new user</a>
-    </#if><br/>
-    <#list users as user>
-        <strong>${user.role.name}   ${user.raiting}</strong><br>
-        <form method="post">
-            ${user.user.email}<br>
-            <input type="hidden" name="userName", value="${user.user.email}" readonly="readonly"/>
-
-            <#if userRole == "admin">
-                <input type="hidden" name="_csrf" value="${_csrf.token}"/>
-                <input type="submit" value="Delete User" /><br>
-                <input type="submit" formmethod="get" formaction="/changegroupmember" value="Change"/>
-                <input type="submit" formaction="/givetask" formmethod="get" value="Give Task"/><br>
-            </#if>
-        </form>
+    </div>
+    <div class="row row-eq-height" style="font-size: 85%">
+    <div class="mx-auto col-lg-2 col-md-2 col-sm-2">
+    <table>
+    <tr>
+       <th colspan="2"><h4>Ожидает:${percents[0][0]}</h4></th>
+    </tr>
+    <tr>
+    <#list waiting as task>
+        <#if task.user.email == userName>
+            <@sgtd.groupTask task ,"mygrouptaskdetails"/>
+        <#else >
+            <@sgtd.groupTask task ,path/>
+        </#if>
     </#list>
-    <div class="row">
-    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-    <table class="table table-hover">
-        <thead>
-            <tr><th>
-                Ожидает:${percents[0][0]}
-            </th></tr>
-        </thead>
-        <tbody>
-        <#list waiting as task>
-            <tr>
-                <td>
-                    <#if task.user.email == userName>
-                        <@sgtd.groupTask task ,"mygrouptaskdetails"/>
-                    <#else >
-                        <@sgtd.groupTask task ,path/>
-                    </#if>
-                </td>
-            </tr>
+    </tr>
+    </table>
+    </div>
+    <div class="mx-auto col-lg-2 col-md-2 col-sm-2">
+    <table>
+    <tr>
+    <th colspan="2"><h4>В процессе:${percents[1][0]}</h4>
+    </tr>
+    <tr>
+        <#list processing as task>
+            <#if task.user.email == userName>
+                <@sgtd.groupTask task ,"mygrouptaskdetails"/>
+            <#else >
+                <@sgtd.groupTask task ,path/>
+            </#if>
         </#list>
-        </tbody>
+    </tr>
     </table>
     </div>
-    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-    <table class="table table-hover">
-        <thead>
-            <tr><th>
-            В процессе:${percents[1][0]}
-            </th></tr>
-        </thead>
-        <tbody>
-            <#list processing as task>
-                <tr>
-                    <td>
-                        <#if task.user.email == userName>
-                            <@sgtd.groupTask task ,"mygrouptaskdetails"/>
-                        <#else >
-                            <@sgtd.groupTask task ,path/>
-                        </#if>
-                    </td>
-                </tr>
-            </#list>
-        </tbody>
-    </table>
-    </div>
-    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-    <table class="table table-hover">
-        <thead>
-            <tr><th>
-            Готово:${percents[2][0]}
-            </th></tr>
-        </thead>
-        <tbody>
+    <div class="mx-auto col-lg-2 col-md-2 col-sm-2">
+    <table>
+    <tr>
+    <th colspan="2"><h4>Готово:${percents[2][0]}</h4>
+    </tr>
+    <tr>
             <#list done as task>
-                <tr>
-                    <td>
                         <@sgtd.groupTask task ,path/>
-                    </td>
-                </tr>
             </#list>
-        </tbody>
+    </tr>
     </table>
     </div>
-    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-    <table class="table table-hover">
-        <thead>
-            <tr><th>
-            Провалено:${percents[3][0]}
-            </th></tr>
-        </thead>
-        <tbody>
+    <div class="mx-auto col-lg-2 col-md-2 col-sm-2" style="height: 100%">
+    <table>
+    <tr>
+    <th colspan="2"><h4>Провалено:${percents[3][0]}</h4>
+    </tr>
+    <tr>
             <#list failed as task>
-                <tr>
-                    <td>
                         <@sgtd.groupTask task ,path/>
-                    </td>
-                </tr>
             </#list>
-        </tbody>
+    </tr>
     </table>
     </div>
-    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-    <table class="table table-hover">
-        <thead>
-            <tr><th>
-            Отклонено: ${percents[4][0]}
-            </th></tr>
-        </thead>
-        <tbody>
+    <div class="mx-auto col-lg-2 col-md-2 col-sm-2" style="height: 100%">
+    <table>
+    <tr>
+    <th colspan="2"><h4>Отклонено: ${percents[4][0]}</h4>
+    </tr>
+    <tr>
         <#list refused as  task>
-            <tr>
-                <td>
                     <@sgtd.groupTask task ,path/>
-                </td>
-            </tr>
         </#list>
-        </tbody>
-    </table>
+        </tr>
+        </table>
     </div>
 </div>
 </@com.page>

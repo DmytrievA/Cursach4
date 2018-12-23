@@ -15,16 +15,11 @@
             <li class="nav-item">
                 <a class="nav-link" href="/newtask">New tasks </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/login">Sign In</a>
-            </li>
-            <li class="nav-item">
-                <form action="/logout" method="post">
-                    <input type="hidden" name="_csrf" value="${_csrf.token}"/>
-                    <button type="submit" class="btn btn-primary">Log out</button>
-                </form>
-            </li>
         </ul>
+        <form class="form-inline my-2 my-lg-0" action="/logout" method="post">
+            <input type="hidden" name="_csrf" value="${_csrf.token}"/>
+            <button type="submit" class="btn btn-outline-success my-2 my-sm-0">Log out</button>
+        </form>
     </div>
 </nav>
 

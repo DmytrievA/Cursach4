@@ -59,6 +59,6 @@
     <#else >
         Файл не прикреплен
     </#if>
-    </td></tr style="border-bottom: darkgrey 2px solid">
+    </td></tr>
     </table>
 </#macro>

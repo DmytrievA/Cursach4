@@ -125,7 +125,7 @@
             <tr>
                 <td colspan="2">
                 <form action="/mygrouptaskdetails" method="get">
-                    <input type="hidden" name="task" value="${task.id}"/>
+                    <input type="hidden" name="taskId" value="${task.id}"/>
                     <input type="submit" value="Details"/>
                 </form>
                 </td>

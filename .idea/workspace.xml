@@ -2,24 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e15483b2-62d4-4beb-8811-62c3ddde323d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/util/Diagram.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/groups.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/groups.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/grouptaskdetails.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/grouptaskdetails.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/newgroup.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/newgroup.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/newtask.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/newtask.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/common.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/common.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/GroupsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/GroupsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/MyTaskDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/MyTaskDetailsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/UserTaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/UserTaskController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/repos/GivenTasksRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/repos/GivenTasksRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mygrouptaskdetails.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mygrouptaskdetails.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mytaskdetails.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mytaskdetails.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/grouptaskdetails.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/grouptaskdetails.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/navbar.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/navbar.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/shortgrouptaskdetails.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/shortgrouptaskdetails.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/mytaskdetails.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/mytaskdetails.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/selectedGroup.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/selectedGroup.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/usertask.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/usertask.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/parts/common.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/parts/common.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/mygrouptaskdetails.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/mygrouptaskdetails.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/mytaskdetails.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/mytaskdetails.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/parts/grouptaskdetails.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/parts/grouptaskdetails.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/selectedGroup.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/selectedGroup.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/parts/mytaskdetails.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/parts/mytaskdetails.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/usertask.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/usertask.ftl" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -50,51 +48,59 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/shortgrouptaskdetails.ftl">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/usertask.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="37" column="53" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="53" />
+            <state relative-caret-position="223">
+              <caret line="127" column="53" selection-start-line="127" selection-start-column="53" selection-end-line="127" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/GroupsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="128" column="38" lean-forward="true" selection-start-line="128" selection-start-column="38" selection-end-line="128" selection-end-column="38" />
               <folding>
-                <element signature="e#693#734#0#HTML" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/mytaskdetails.ftl">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/repos/GivenTasksRepo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/grouptaskdetails.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="61" column="55" selection-start-line="61" selection-start-column="55" selection-end-line="61" selection-end-column="55" />
+            <state relative-caret-position="413">
+              <caret line="37" column="52" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/groups.ftl">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/util/Diagram.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/newgroup.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="56" selection-start-line="3" selection-start-column="56" selection-end-line="3" selection-end-column="56" />
+            <state relative-caret-position="170">
+              <caret line="10" column="81" selection-start-line="10" selection-start-column="81" selection-end-line="10" selection-end-column="81" />
+              <folding>
+                <element signature="e#195#196#0" expanded="true" />
+                <element signature="e#229#230#0" expanded="true" />
+                <element signature="e#283#284#0" expanded="true" />
+                <element signature="e#329#330#0" expanded="true" />
+                <element signature="e#367#368#0" expanded="true" />
+                <element signature="e#401#402#0" expanded="true" />
+                <element signature="e#455#456#0" expanded="true" />
+                <element signature="e#501#502#0" expanded="true" />
+                <element signature="e#540#541#0" expanded="true" />
+                <element signature="e#575#576#0" expanded="true" />
+                <element signature="e#631#632#0" expanded="true" />
+                <element signature="e#679#680#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -103,12 +109,43 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/selectedGroup.ftl">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="277">
-              <caret line="46" column="8" lean-forward="true" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
-              <folding>
-                <element signature="e#1851#1878#0#HTML" expanded="true" />
-                <element signature="e#2929#2949#0#HTML" expanded="true" />
-                <element signature="e#3232#3252#0#HTML" expanded="true" />
-              </folding>
+              <caret line="100" column="41" selection-start-line="100" selection-start-column="41" selection-end-line="100" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/shortgrouptaskdetails.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="51" lean-forward="true" selection-start-line="1" selection-start-column="51" selection-end-line="1" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/grouptaskdetails.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="23" selection-start-column="23" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/mygrouptaskdetails.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/mytaskdetails.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="44" lean-forward="true" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -116,26 +153,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/grouptaskdetails.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
+            <state relative-caret-position="138">
               <caret line="9" column="28" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/usertask.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="59" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/navbar.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="77" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="77" />
             </state>
           </provider>
         </entry>
@@ -167,8 +186,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/templates/mygrouptaskdetails.mustache" />
-        <option value="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/domain/Entity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/domain/StatusType.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/mytaskdetails.mustache" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/main.mustache" />
@@ -180,7 +197,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/parts/grouptaskdetails.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/parts/mytaskdetails.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/parts/mytaskdetails.frl" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/parts/mytaskdetails.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/newgroup.mustache" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/newtask.mustache" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/selectedGroup.mustache" />
@@ -191,19 +207,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/GiveTaskController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/GroupTaskDetailsController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/NewTaskController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/repos/GivenTasksRepo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/GroupsController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/domain/TaskType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/UserTaskController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/MyTaskDetails.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/mytaskdetails.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/addgroupuser.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/changegroupmember.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/changegrouptask.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/registration.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/mygrouptaskdetails.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/givetask.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/usertask.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/parts/common.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/login.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/parts/secutrity.ftl" />
@@ -215,9 +225,18 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/newtask.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/newgroup.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/groups.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/selectedGroup.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/parts/shortgrouptaskdetails.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/UserTaskController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/MyTaskDetailsController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/parts/grouptaskdetails.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/mygrouptaskdetails.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/mytaskdetails.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/parts/mytaskdetails.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/usertask.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/util/Diagram.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/selectedGroup.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/repos/GivenTasksRepo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/GroupsController.java" />
       </list>
     </option>
   </component>
@@ -250,6 +269,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -291,25 +311,16 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="dailyTimePlaner" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Cursach4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Cursach4" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dailyTimePlaner" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Cursach4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Cursach4" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dailyTimePlaner" type="462c0819:PsiDirectoryNode" />
               <item name="repos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Cursach4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cursach4" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dailyTimePlaner" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Cursach4" type="b2602c69:ProjectViewProjectNode" />
@@ -337,6 +348,23 @@
             </path>
             <path>
               <item name="Cursach4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cursach4" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Cursach4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cursach4" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Cursach4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cursach4" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="generated-sources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Cursach4" type="b2602c69:ProjectViewProjectNode" />
               <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
             </path>
             <path>
@@ -348,7 +376,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -364,15 +391,15 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545561416715" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545993995318" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="E:/downloads/LB3WSServerJAXWSExampleOnTomcat" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
     <property name="settings.editor.splitter.proportion" value="0.38102895" />
   </component>
   <component name="RecentsManager">
@@ -477,6 +504,11 @@
       <workItem from="1545380046909" duration="40546000" />
       <workItem from="1545495254367" duration="6352000" />
       <workItem from="1545547131464" duration="13677000" />
+      <workItem from="1545595032823" duration="1196000" />
+      <workItem from="1545598527515" duration="3726000" />
+      <workItem from="1545652261275" duration="155000" />
+      <workItem from="1545987822295" duration="462000" />
+      <workItem from="1545988966646" duration="5031000" />
     </task>
     <servers />
   </component>
@@ -513,7 +545,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="271107000" />
+    <option name="totallyTimeSpent" value="281677000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -526,8 +558,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25567323" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27458397" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -640,32 +673,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.0.9.RELEASE/spring-core-5.0.9.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="33" column="110" selection-start-line="33" selection-start-column="110" selection-end-line="33" selection-end-column="110" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/domain/StatusType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/domain/Entity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="61" column="21" selection-start-line="61" selection-start-column="21" selection-end-line="61" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1733#1734#0" expanded="true" />
-            <element signature="e#1761#1762#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/repos/GroupRoleTypeRepo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -777,26 +784,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/repos/GivenTasksRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/ChangeGroupTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/GroupTaskDetailsController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
@@ -807,34 +794,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/NewTaskController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="24" column="111" selection-start-line="24" selection-start-column="111" selection-end-line="24" selection-end-column="111" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/domain/TaskType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="393">
           <caret line="53" column="44" lean-forward="true" selection-start-line="53" selection-start-column="44" selection-end-line="53" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/UserTaskController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="65" column="45" selection-start-line="65" selection-start-column="45" selection-end-line="65" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/MyTaskDetails.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="43" column="21" lean-forward="true" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -866,41 +829,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/mygrouptaskdetails.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/GroupsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="118" column="22" selection-start-line="118" selection-start-column="22" selection-end-line="118" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/security.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="56" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/security.ftl" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/common.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -911,24 +844,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/givetask.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="478">
           <caret line="48" column="67" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/mytaskdetails.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="64" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="64" />
         </state>
       </provider>
     </entry>
@@ -946,10 +865,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/usertask.ftl">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/groups.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="59" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="59" />
+        <state relative-caret-position="255">
+          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/com/DTP/dailyTimePlaner/service/UserService.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/RegistrationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="22" column="56" lean-forward="true" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
         </state>
       </provider>
     </entry>
@@ -960,6 +889,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/ChangeGroupTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="56" column="60" lean-forward="true" selection-start-line="56" selection-start-column="60" selection-end-line="56" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/MyTaskDetailsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/UserTaskController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="22" selection-start-line="22" selection-end-line="71" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/NewTaskController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="24" column="111" selection-start-line="24" selection-start-column="111" selection-end-line="24" selection-end-column="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/navbar.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -967,53 +937,107 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/groups.ftl">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/common.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+        <state relative-caret-position="170">
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/shortgrouptaskdetails.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="51" lean-forward="true" selection-start-line="1" selection-start-column="51" selection-end-line="1" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/grouptaskdetails.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="23" selection-start-column="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/mygrouptaskdetails.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/mytaskdetails.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="44" lean-forward="true" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/grouptaskdetails.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
+        <state relative-caret-position="138">
           <caret line="9" column="28" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/mytaskdetails.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/usertask.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="127" column="53" selection-start-line="127" selection-start-column="53" selection-end-line="127" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/util/Diagram.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="81" selection-start-line="10" selection-start-column="81" selection-end-line="10" selection-end-column="81" />
+          <folding>
+            <element signature="e#195#196#0" expanded="true" />
+            <element signature="e#229#230#0" expanded="true" />
+            <element signature="e#283#284#0" expanded="true" />
+            <element signature="e#329#330#0" expanded="true" />
+            <element signature="e#367#368#0" expanded="true" />
+            <element signature="e#401#402#0" expanded="true" />
+            <element signature="e#455#456#0" expanded="true" />
+            <element signature="e#501#502#0" expanded="true" />
+            <element signature="e#540#541#0" expanded="true" />
+            <element signature="e#575#576#0" expanded="true" />
+            <element signature="e#631#632#0" expanded="true" />
+            <element signature="e#679#680#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/repos/GivenTasksRepo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="37" column="52" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/selectedGroup.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
-          <caret line="46" column="8" lean-forward="true" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+          <caret line="100" column="41" selection-start-line="100" selection-start-column="41" selection-end-line="100" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/DTP/dailyTimePlaner/controller/GroupsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="128" column="38" lean-forward="true" selection-start-line="128" selection-start-column="38" selection-end-line="128" selection-end-column="38" />
           <folding>
-            <element signature="e#1851#1878#0#HTML" expanded="true" />
-            <element signature="e#2929#2949#0#HTML" expanded="true" />
-            <element signature="e#3232#3252#0#HTML" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/shortgrouptaskdetails.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="37" column="53" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="53" />
-          <folding>
-            <element signature="e#693#734#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/mytaskdetails.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/grouptaskdetails.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="61" column="55" selection-start-line="61" selection-start-column="55" selection-end-line="61" selection-end-column="55" />
         </state>
       </provider>
     </entry>

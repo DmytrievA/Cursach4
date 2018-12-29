@@ -33,6 +33,10 @@ public interface GivenTasksRepo extends JpaRepository<GivenTasks,Integer> {
             nativeQuery = true)
     List<Object[]> selectValuesForPieChart(Integer groupId);
 
+    @Query(value = "SELECT COUNT(gt.id),st.`name` FROM state_task st LEFT JOIN (SELECT gt.id, gt.id_state_task FROM give_task gt WHERE gt.from_group = ?1 AND gt.user_email = ?2) gt ON st.id = gt.id_state_task GROUP BY st.id",
+            nativeQuery = true)
+    List<Object[]> selectValuesForPieChartByUsername(Integer groupId,String username);
+
     List<GivenTasks> findByGroupIdAndTaskStatusName(Integer groupId,String status);
 
     List<GivenTasks> findByGroupIdAndUserEmailAndTaskStatusName(Integer groupId,String email, String status);

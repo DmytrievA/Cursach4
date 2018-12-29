@@ -12,13 +12,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.text.ParseException;
 import java.util.Map;
 
+
 @Controller
-public class MyTaskDetails {
+public class MyTaskDetailsController {
     @Autowired
     private TaskTypeRepo taskTypeRepo;
     @Autowired
     private StatusTypeRepo statusTypeRepo;
-
     @GetMapping("/mytaskdetails")
     public String showPage(@RequestParam String task,
                            Map<String,Object> model)

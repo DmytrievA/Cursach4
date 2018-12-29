@@ -22,7 +22,6 @@ import java.util.Map;
 
 @Controller
 public class UserTaskController {
-
     @Autowired
     private UserRepo userRepo;
     @Autowired
@@ -32,28 +31,22 @@ public class UserTaskController {
     @Autowired
     private GivenTasksRepo givenTasksRepo;
     @GetMapping("/usertask")
-    public String greeting(Map<String, Object> model,
+    public String showPage(Map<String, Object> model,
                            final Principal principal,
-                           HttpSession session)
-    {
+                           HttpSession session) {
         String userName ="";
         if(null != principal)
             userName = principal.getName();
-
         UserType currentUser = userRepo.findByEmail(userName);
         session.setAttribute("currentUser",currentUser);
-
-
         model.put("states",statusTypeRepo.findAll());
         List<TaskType> tasks = taskTypeRepo
                 .findByUserEmailOrderByDateDesc(userName);
         model.put("tasks", tasks);
-
         List<GivenTasks> groupTasks = givenTasksRepo.findByUserOrderByDateDesc(currentUser);
         model.put("groupTasks", groupTasks);
         return "usertask";
     }
-
     @PostMapping("/usertask")
     public String addTask(
             @RequestParam String name,
@@ -65,16 +58,12 @@ public class UserTaskController {
             HttpSession session,
             Map<String,Object> model) throws ParseException {
         UserType user = (UserType) session.getAttribute("currentUser");
-
-
         TaskType task = new TaskType();
         task.setDateTimeDuration(date,timeStart,timeFinish);
-
         task.setTitle(name);
         task.setDescription(description);
         task.setTaskStatus(statusTypeRepo.findById(Integer.parseInt(taskState)).get());
         task.setUser(user);
-
         taskTypeRepo.save(task);
         Iterable<TaskType> tasks = taskTypeRepo.findByUserEmailOrderByDateDesc(user.getEmail());
         model.put("tasks", tasks);

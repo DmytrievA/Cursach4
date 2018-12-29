@@ -1,6 +1,7 @@
 <#import "parts/common.ftl" as com>
 <#import "parts/mytaskdetails.ftl" as t>
 <@com.page>
+    <div class="mx-auto col-lg-4 col-md-4 col-sm-4">
     <@t.myTask task/>
     <form method="post">
         <input type="text" multiple="multiple" name="description"/>
@@ -18,6 +19,6 @@
         <#else >
         <input type="submit" name = "action" value="Change"/>
     </#if>
-
     </form>
+    </div>
 </@com.page>

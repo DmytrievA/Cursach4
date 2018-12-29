@@ -31,9 +31,9 @@
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="chart" width="420" height="20" aria-labelledby="title" role="img">
             <title id="title">Статистика заданий по группе</title>
                 <g class="bar">
-                    <rect width=" ${row.getKey()}%" height="19"></rect>
+                    <rect width=" ${row.getPercentShow()}%" height="19"></rect>
                 </g>
-        </svg><label>${row.getKey()}% ${row.getValue()}</label>
+        </svg><label>${row.getPercentText()}% ${row.getCategoryName()}</label>
         </#list>
     </figure>
 </div>
